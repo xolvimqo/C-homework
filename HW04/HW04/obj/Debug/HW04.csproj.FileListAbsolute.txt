@@ -1,0 +1,9 @@
+c:\users\iii\documents\visual studio 2015\Projects\HW04\HW04\bin\Debug\HW04.exe.config
+c:\users\iii\documents\visual studio 2015\Projects\HW04\HW04\bin\Debug\HW04.exe
+c:\users\iii\documents\visual studio 2015\Projects\HW04\HW04\bin\Debug\HW04.pdb
+c:\users\iii\documents\visual studio 2015\Projects\HW04\HW04\obj\Debug\HW04.csprojResolveAssemblyReference.cache
+c:\users\iii\documents\visual studio 2015\Projects\HW04\HW04\obj\Debug\HW04.Form1.resources
+c:\users\iii\documents\visual studio 2015\Projects\HW04\HW04\obj\Debug\HW04.Properties.Resources.resources
+c:\users\iii\documents\visual studio 2015\Projects\HW04\HW04\obj\Debug\HW04.csproj.GenerateResource.Cache
+c:\users\iii\documents\visual studio 2015\Projects\HW04\HW04\obj\Debug\HW04.exe
+c:\users\iii\documents\visual studio 2015\Projects\HW04\HW04\obj\Debug\HW04.pdb

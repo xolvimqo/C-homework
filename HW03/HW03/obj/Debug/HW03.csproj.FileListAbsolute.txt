@@ -1,0 +1,9 @@
+c:\users\iii\documents\visual studio 2015\Projects\HW03\HW03\bin\Debug\HW03.exe.config
+C:\Users\iii\Documents\Visual Studio 2015\Projects\HW03\HW03\bin\Debug\HW03.exe
+C:\Users\iii\Documents\Visual Studio 2015\Projects\HW03\HW03\bin\Debug\HW03.pdb
+C:\Users\iii\Documents\Visual Studio 2015\Projects\HW03\HW03\obj\Debug\HW03.csprojResolveAssemblyReference.cache
+C:\Users\iii\Documents\Visual Studio 2015\Projects\HW03\HW03\obj\Debug\HW03.Form1.resources
+C:\Users\iii\Documents\Visual Studio 2015\Projects\HW03\HW03\obj\Debug\HW03.Properties.Resources.resources
+C:\Users\iii\Documents\Visual Studio 2015\Projects\HW03\HW03\obj\Debug\HW03.csproj.GenerateResource.Cache
+C:\Users\iii\Documents\Visual Studio 2015\Projects\HW03\HW03\obj\Debug\HW03.exe
+C:\Users\iii\Documents\Visual Studio 2015\Projects\HW03\HW03\obj\Debug\HW03.pdb

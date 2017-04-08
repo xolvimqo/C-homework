@@ -1,0 +1,18 @@
+c:\users\iii\documents\visual studio 2015\Projects\FinalHW\FinalHW\bin\Debug\FinalHW.exe.config
+c:\users\iii\documents\visual studio 2015\Projects\FinalHW\FinalHW\bin\Debug\FinalHW.exe
+c:\users\iii\documents\visual studio 2015\Projects\FinalHW\FinalHW\bin\Debug\FinalHW.pdb
+c:\users\iii\documents\visual studio 2015\Projects\FinalHW\FinalHW\obj\Debug\FinalHW.csprojResolveAssemblyReference.cache
+c:\users\iii\documents\visual studio 2015\Projects\FinalHW\FinalHW\obj\Debug\FinalHW.Form1.resources
+c:\users\iii\documents\visual studio 2015\Projects\FinalHW\FinalHW\obj\Debug\FinalHW.Properties.Resources.resources
+c:\users\iii\documents\visual studio 2015\Projects\FinalHW\FinalHW\obj\Debug\FinalHW.csproj.GenerateResource.Cache
+c:\users\iii\documents\visual studio 2015\Projects\FinalHW\FinalHW\obj\Debug\FinalHW.exe
+c:\users\iii\documents\visual studio 2015\Projects\FinalHW\FinalHW\obj\Debug\FinalHW.pdb
+F:\iii\c#程式設計\FinalHW\FinalHW\bin\Debug\FinalHW.exe.config
+F:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.exe
+F:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.pdb
+F:\iii\c#程式設計\FinalHW\FinalHW\bin\Debug\FinalHW.exe
+F:\iii\c#程式設計\FinalHW\FinalHW\bin\Debug\FinalHW.pdb
+F:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.csprojResolveAssemblyReference.cache
+F:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.Form1.resources
+F:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.Properties.Resources.resources
+F:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.csproj.GenerateResource.Cache

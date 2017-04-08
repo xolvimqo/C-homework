@@ -1,0 +1,16 @@
+c:\users\iii\documents\visual studio 2015\Projects\HW02\HW02\bin\Debug\HW02.exe.config
+c:\users\iii\documents\visual studio 2015\Projects\HW02\HW02\bin\Debug\HW02.exe
+c:\users\iii\documents\visual studio 2015\Projects\HW02\HW02\bin\Debug\HW02.pdb
+c:\users\iii\documents\visual studio 2015\Projects\HW02\HW02\obj\Debug\HW02.csprojResolveAssemblyReference.cache
+c:\users\iii\documents\visual studio 2015\Projects\HW02\HW02\obj\Debug\HW02.Form1.resources
+c:\users\iii\documents\visual studio 2015\Projects\HW02\HW02\obj\Debug\HW02.Properties.Resources.resources
+c:\users\iii\documents\visual studio 2015\Projects\HW02\HW02\obj\Debug\HW02.csproj.GenerateResource.Cache
+c:\users\iii\documents\visual studio 2015\Projects\HW02\HW02\obj\Debug\HW02.exe
+c:\users\iii\documents\visual studio 2015\Projects\HW02\HW02\obj\Debug\HW02.pdb
+E:\iii\c#程式設計\HW02\HW02\bin\Debug\HW02.exe.config
+E:\iii\c#程式設計\HW02\HW02\obj\Debug\HW02.exe
+E:\iii\c#程式設計\HW02\HW02\obj\Debug\HW02.pdb
+E:\iii\c#程式設計\HW02\HW02\obj\Debug\HW02.csprojResolveAssemblyReference.cache
+E:\iii\c#程式設計\HW02\HW02\obj\Debug\HW02.Form1.resources
+E:\iii\c#程式設計\HW02\HW02\obj\Debug\HW02.Properties.Resources.resources
+E:\iii\c#程式設計\HW02\HW02\obj\Debug\HW02.csproj.GenerateResource.Cache
