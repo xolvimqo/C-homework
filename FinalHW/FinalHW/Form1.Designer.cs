@@ -35,6 +35,8 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.tbRandom = new System.Windows.Forms.TextBox();
             this.lblOutput = new System.Windows.Forms.Label();
+            this.btnAuto = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +79,7 @@
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnStart.Location = new System.Drawing.Point(16, 471);
+            this.btnStart.Location = new System.Drawing.Point(16, 479);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(202, 55);
             this.btnStart.TabIndex = 3;
@@ -88,7 +90,7 @@
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnReset.Location = new System.Drawing.Point(221, 471);
+            this.btnReset.Location = new System.Drawing.Point(224, 479);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(202, 55);
             this.btnReset.TabIndex = 5;
@@ -113,11 +115,35 @@
             this.lblOutput.Size = new System.Drawing.Size(299, 492);
             this.lblOutput.TabIndex = 7;
             // 
+            // btnAuto
+            // 
+            this.btnAuto.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnAuto.Location = new System.Drawing.Point(16, 418);
+            this.btnAuto.Name = "btnAuto";
+            this.btnAuto.Size = new System.Drawing.Size(202, 55);
+            this.btnAuto.TabIndex = 8;
+            this.btnAuto.Text = "AutoSelect";
+            this.btnAuto.UseVisualStyleBackColor = true;
+            this.btnAuto.Click += new System.EventHandler(this.btnAuto_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnAdd.Location = new System.Drawing.Point(224, 418);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(202, 55);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "AddNewNumbers";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 546);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnAuto);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.tbRandom);
             this.Controls.Add(this.btnReset);
@@ -141,6 +167,8 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.TextBox tbRandom;
         private System.Windows.Forms.Label lblOutput;
+        private System.Windows.Forms.Button btnAuto;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
 

@@ -16,3 +16,12 @@ F:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.csprojResolveAssemblyRef
 F:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.Form1.resources
 F:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.Properties.Resources.resources
 F:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.csproj.GenerateResource.Cache
+E:\iii\c#程式設計\FinalHW\FinalHW\bin\Debug\FinalHW.exe.config
+E:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.exe
+E:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.pdb
+E:\iii\c#程式設計\FinalHW\FinalHW\bin\Debug\FinalHW.exe
+E:\iii\c#程式設計\FinalHW\FinalHW\bin\Debug\FinalHW.pdb
+E:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.csprojResolveAssemblyReference.cache
+E:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.Form1.resources
+E:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.Properties.Resources.resources
+E:\iii\c#程式設計\FinalHW\FinalHW\obj\Debug\FinalHW.csproj.GenerateResource.Cache
