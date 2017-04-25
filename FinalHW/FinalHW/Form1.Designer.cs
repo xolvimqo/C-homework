@@ -112,7 +112,7 @@
             this.lblOutput.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblOutput.Location = new System.Drawing.Point(487, 34);
             this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(299, 492);
+            this.lblOutput.Size = new System.Drawing.Size(299, 439);
             this.lblOutput.TabIndex = 7;
             // 
             // btnAuto
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 546);
+            this.ClientSize = new System.Drawing.Size(832, 546);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnAuto);
             this.Controls.Add(this.lblOutput);

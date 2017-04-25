@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace FinalHW
 {
     public partial class Form1 : Form
     {
+        //Local Database
+        SqlConnectionStringBuilder scsb;
         // to set a group of numbers is selected.
         bool numberSelected = false;
         // Power lottery is 1, Today lottery is 2
@@ -40,7 +43,13 @@ namespace FinalHW
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            /*
+            //Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = F:\iii\c#程式設計\FinalHW\FinalHW\history.mdf;Integrated Security=True
+            scsb = new SqlConnectionStringBuilder();
+            scsb.DataSource = @"(localDB)\MSSQLLocalDB";
+            scsb.InitialCatalog = "Database1";
+            scsb.IntegratedSecurity = true;
+            */
         }
 
         private void PowerLottery_Click(object sender, EventArgs e)
@@ -346,6 +355,15 @@ namespace FinalHW
             {
                 MessageBox.Show("{Please select numbers.");
             }
+            /*
+            // add history to LocalDB
+            SqlConnection sqlConnection = new SqlConnection(scsb.ToString());
+            sqlConnection.Open();
+            string strSQL = "insert into history values( @NewHistory)";
+            SqlCommand sqlCommand = new SqlCommand(strSQL, sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@NewHistory", lblOutput.Text);
+            sqlConnection.Close();
+            */
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -431,5 +449,28 @@ namespace FinalHW
                 TodayLottery539.Controls.Clear();
             }
         }
+        /*
+        private void btnShowHistory_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlConnection = new SqlConnection(scsb.ToString());
+            sqlConnection.Open();
+            
+            string strSQL = "select * from history";
+            SqlCommand sqlCommand = new SqlCommand(strSQL, sqlConnection);
+            SqlDataReader sqlReader = sqlCommand.ExecuteReader();
+
+            string strOutput = "";
+
+            while (sqlReader.Read())
+            {
+                strOutput += sqlReader["myHistory"].ToString();
+            }
+
+            sqlReader.Close();
+            sqlConnection.Close();
+
+            lblOutput.Text = strOutput;
+        }
+        */
     }
 }
