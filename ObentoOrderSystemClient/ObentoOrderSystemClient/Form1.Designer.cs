@@ -33,10 +33,11 @@
             this.studentPage = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lvStoreMenu = new System.Windows.Forms.ListView();
             this.cbStoreName = new System.Windows.Forms.ComboBox();
             this.obentoDataSet1 = new ObentoOrderSystemClient.ObentoDataSet1();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnEnd = new System.Windows.Forms.Button();
+            this.btnCheck = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -47,16 +48,15 @@
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbClassroom = new System.Windows.Forms.ComboBox();
-            this.studentTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cbStudentName = new System.Windows.Forms.ComboBox();
             this.chkbox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.counterPage = new System.Windows.Forms.TabPage();
+            this.studentTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.studentTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentTableTableAdapter = new ObentoOrderSystemClient.ObentoDataSet1TableAdapters.studentTableTableAdapter();
-            this.lvStoreMenu = new System.Windows.Forms.ListView();
             this.tabControl1.SuspendLayout();
             this.studentPage.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -95,9 +95,9 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Location = new System.Drawing.Point(472, 7);
+            this.groupBox4.Location = new System.Drawing.Point(584, 7);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(391, 605);
+            this.groupBox4.Size = new System.Drawing.Size(279, 605);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "總訂單";
@@ -108,10 +108,18 @@
             this.groupBox3.Controls.Add(this.cbStoreName);
             this.groupBox3.Location = new System.Drawing.Point(274, 7);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(192, 599);
+            this.groupBox3.Size = new System.Drawing.Size(304, 599);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "店家菜單";
+            // 
+            // lvStoreMenu
+            // 
+            this.lvStoreMenu.Location = new System.Drawing.Point(6, 62);
+            this.lvStoreMenu.Name = "lvStoreMenu";
+            this.lvStoreMenu.Size = new System.Drawing.Size(292, 531);
+            this.lvStoreMenu.TabIndex = 15;
+            this.lvStoreMenu.UseCompatibleStateImageBehavior = false;
             // 
             // cbStoreName
             // 
@@ -120,7 +128,7 @@
             this.cbStoreName.FormattingEnabled = true;
             this.cbStoreName.Location = new System.Drawing.Point(6, 24);
             this.cbStoreName.Name = "cbStoreName";
-            this.cbStoreName.Size = new System.Drawing.Size(153, 32);
+            this.cbStoreName.Size = new System.Drawing.Size(200, 32);
             this.cbStoreName.TabIndex = 14;
             this.cbStoreName.SelectedIndexChanged += new System.EventHandler(this.cbStoreName_SelectedIndexChanged);
             // 
@@ -131,7 +139,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnEnd);
+            this.groupBox2.Controls.Add(this.btnCheck);
             this.groupBox2.Controls.Add(this.btnSend);
             this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.btnAdd);
@@ -147,20 +155,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "訂購單";
             // 
-            // btnEnd
+            // btnCheck
             // 
-            this.btnEnd.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnEnd.Location = new System.Drawing.Point(117, 356);
-            this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(105, 41);
-            this.btnEnd.TabIndex = 14;
-            this.btnEnd.Text = "  結束";
-            this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnCheck.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCheck.Location = new System.Drawing.Point(6, 356);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(105, 41);
+            this.btnCheck.TabIndex = 14;
+            this.btnCheck.Text = "  確認";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // btnSend
             // 
             this.btnSend.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnSend.Location = new System.Drawing.Point(6, 356);
+            this.btnSend.Location = new System.Drawing.Point(117, 356);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(105, 41);
             this.btnSend.TabIndex = 13;
@@ -176,6 +185,7 @@
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -186,11 +196,13 @@
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "加入";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lboxStuOrder
             // 
+            this.lboxStuOrder.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lboxStuOrder.FormattingEnabled = true;
-            this.lboxStuOrder.ItemHeight = 12;
+            this.lboxStuOrder.ItemHeight = 16;
             this.lboxStuOrder.Location = new System.Drawing.Point(6, 154);
             this.lboxStuOrder.Name = "lboxStuOrder";
             this.lboxStuOrder.Size = new System.Drawing.Size(226, 196);
@@ -202,7 +214,7 @@
             this.cbObendoName.FormattingEnabled = true;
             this.cbObendoName.Location = new System.Drawing.Point(79, 15);
             this.cbObendoName.Name = "cbObendoName";
-            this.cbObendoName.Size = new System.Drawing.Size(153, 32);
+            this.cbObendoName.Size = new System.Drawing.Size(171, 32);
             this.cbObendoName.TabIndex = 9;
             // 
             // numUD
@@ -210,8 +222,9 @@
             this.numUD.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.numUD.Location = new System.Drawing.Point(79, 53);
             this.numUD.Name = "numUD";
-            this.numUD.Size = new System.Drawing.Size(153, 36);
+            this.numUD.Size = new System.Drawing.Size(171, 36);
             this.numUD.TabIndex = 8;
+            this.numUD.ValueChanged += new System.EventHandler(this.numUD_ValueChanged);
             // 
             // label14
             // 
@@ -257,11 +270,6 @@
             this.cbClassroom.Size = new System.Drawing.Size(153, 32);
             this.cbClassroom.TabIndex = 14;
             this.cbClassroom.SelectedIndexChanged += new System.EventHandler(this.cbClassroom_SelectedIndexChanged);
-            // 
-            // studentTableBindingSource1
-            // 
-            this.studentTableBindingSource1.DataMember = "studentTable";
-            this.studentTableBindingSource1.DataSource = this.obentoDataSet1;
             // 
             // cbStudentName
             // 
@@ -324,6 +332,11 @@
             this.counterPage.Text = "櫃台";
             this.counterPage.UseVisualStyleBackColor = true;
             // 
+            // studentTableBindingSource1
+            // 
+            this.studentTableBindingSource1.DataMember = "studentTable";
+            this.studentTableBindingSource1.DataSource = this.obentoDataSet1;
+            // 
             // studentTableBindingSource
             // 
             this.studentTableBindingSource.DataMember = "studentTable";
@@ -332,14 +345,6 @@
             // studentTableTableAdapter
             // 
             this.studentTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // lvStoreMenu
-            // 
-            this.lvStoreMenu.Location = new System.Drawing.Point(6, 62);
-            this.lvStoreMenu.Name = "lvStoreMenu";
-            this.lvStoreMenu.Size = new System.Drawing.Size(166, 531);
-            this.lvStoreMenu.TabIndex = 15;
-            this.lvStoreMenu.UseCompatibleStateImageBehavior = false;
             // 
             // Form1
             // 
@@ -383,7 +388,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage counterPage;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Button btnEnd;
+        private System.Windows.Forms.Button btnCheck;
         private ObentoDataSet1 obentoDataSet1;
         private System.Windows.Forms.BindingSource studentTableBindingSource;
         private ObentoDataSet1TableAdapters.studentTableTableAdapter studentTableTableAdapter;
