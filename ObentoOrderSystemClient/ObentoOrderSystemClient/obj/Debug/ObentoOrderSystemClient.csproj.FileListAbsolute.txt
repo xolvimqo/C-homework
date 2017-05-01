@@ -1,0 +1,36 @@
+F:\iii\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.exe.config
+F:\iii\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.exe
+F:\iii\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.pdb
+F:\iii\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.csprojResolveAssemblyReference.cache
+F:\iii\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.Form1.resources
+F:\iii\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.Properties.Resources.resources
+F:\iii\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.csproj.GenerateResource.Cache
+F:\iii\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.exe
+F:\iii\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.pdb
+C:\Users\iii\Documents\Visual Studio 2015\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.exe.config
+C:\Users\iii\Documents\Visual Studio 2015\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.exe
+C:\Users\iii\Documents\Visual Studio 2015\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.pdb
+C:\Users\iii\Documents\Visual Studio 2015\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.exe
+C:\Users\iii\Documents\Visual Studio 2015\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.pdb
+C:\Users\iii\Documents\Visual Studio 2015\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.csprojResolveAssemblyReference.cache
+C:\Users\iii\Documents\Visual Studio 2015\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.Form1.resources
+C:\Users\iii\Documents\Visual Studio 2015\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.Properties.Resources.resources
+C:\Users\iii\Documents\Visual Studio 2015\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.csproj.GenerateResource.Cache
+C:\Users\Xolvimqo\Desktop\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.exe.config
+C:\Users\Xolvimqo\Desktop\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.exe
+C:\Users\Xolvimqo\Desktop\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.pdb
+C:\Users\Xolvimqo\Desktop\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.csprojResolveAssemblyReference.cache
+C:\Users\Xolvimqo\Desktop\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.Form1.resources
+C:\Users\Xolvimqo\Desktop\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.Properties.Resources.resources
+C:\Users\Xolvimqo\Desktop\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.csproj.GenerateResource.Cache
+C:\Users\Xolvimqo\Desktop\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.exe
+C:\Users\Xolvimqo\Desktop\c#程式設計\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.pdb
+C:\Users\Xolvimqo\Documents\Visual Studio 2017\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.exe.config
+C:\Users\Xolvimqo\Documents\Visual Studio 2017\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.exe
+C:\Users\Xolvimqo\Documents\Visual Studio 2017\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\bin\Debug\ObentoOrderSystemClient.pdb
+C:\Users\Xolvimqo\Documents\Visual Studio 2017\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.csprojResolveAssemblyReference.cache
+C:\Users\Xolvimqo\Documents\Visual Studio 2017\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.Form1.resources
+C:\Users\Xolvimqo\Documents\Visual Studio 2017\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.Properties.Resources.resources
+C:\Users\Xolvimqo\Documents\Visual Studio 2017\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.csproj.GenerateResource.Cache
+C:\Users\Xolvimqo\Documents\Visual Studio 2017\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.exe
+C:\Users\Xolvimqo\Documents\Visual Studio 2017\Projects\ObentoOrderSystemClient\ObentoOrderSystemClient\obj\Debug\ObentoOrderSystemClient.pdb
