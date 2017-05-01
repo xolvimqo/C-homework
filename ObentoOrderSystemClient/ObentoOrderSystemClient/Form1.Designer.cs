@@ -32,10 +32,16 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.studentPage = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnSendSum = new System.Windows.Forms.Button();
+            this.btnRefund = new System.Windows.Forms.Button();
+            this.btnPaid = new System.Windows.Forms.Button();
+            this.lboxPaidOrder = new System.Windows.Forms.ListBox();
+            this.lboxUnpaidOrder = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnLock = new System.Windows.Forms.Button();
             this.lvStoreMenu = new System.Windows.Forms.ListView();
             this.cbStoreName = new System.Windows.Forms.ComboBox();
-            this.obentoDataSet1 = new ObentoOrderSystemClient.ObentoDataSet1();
+            this.obentoDataSet = new ObentoOrderSystemClient.ObentoDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCheck = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
@@ -54,16 +60,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.counterPage = new System.Windows.Forms.TabPage();
+            this.orderTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.studentTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableTableAdapter = new ObentoOrderSystemClient.ObentoDataSet1TableAdapters.studentTableTableAdapter();
+            this.studentTableTableAdapter = new ObentoOrderSystemClient.ObentoDataSetTableAdapters.studentTableTableAdapter();
+            this.orderTableTableAdapter = new ObentoOrderSystemClient.ObentoDataSetTableAdapters.orderTableTableAdapter();
+            this.tableAdapterManager = new ObentoOrderSystemClient.ObentoDataSetTableAdapters.TableAdapterManager();
             this.tabControl1.SuspendLayout();
             this.studentPage.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.obentoDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obentoDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUD)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentTableBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentTableBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +86,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(877, 638);
+            this.tabControl1.Size = new System.Drawing.Size(1095, 670);
             this.tabControl1.TabIndex = 0;
             // 
             // studentPage
@@ -88,22 +99,78 @@
             this.studentPage.Location = new System.Drawing.Point(4, 22);
             this.studentPage.Name = "studentPage";
             this.studentPage.Padding = new System.Windows.Forms.Padding(3);
-            this.studentPage.Size = new System.Drawing.Size(869, 612);
+            this.studentPage.Size = new System.Drawing.Size(1087, 644);
             this.studentPage.TabIndex = 0;
             this.studentPage.Text = "學生";
             this.studentPage.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnSendSum);
+            this.groupBox4.Controls.Add(this.btnRefund);
+            this.groupBox4.Controls.Add(this.btnPaid);
+            this.groupBox4.Controls.Add(this.lboxPaidOrder);
+            this.groupBox4.Controls.Add(this.lboxUnpaidOrder);
             this.groupBox4.Location = new System.Drawing.Point(584, 7);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(279, 605);
+            this.groupBox4.Size = new System.Drawing.Size(496, 605);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "總訂單";
             // 
+            // btnSendSum
+            // 
+            this.btnSendSum.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnSendSum.Location = new System.Drawing.Point(385, 464);
+            this.btnSendSum.Name = "btnSendSum";
+            this.btnSendSum.Size = new System.Drawing.Size(105, 41);
+            this.btnSendSum.TabIndex = 18;
+            this.btnSendSum.Text = "送出";
+            this.btnSendSum.UseVisualStyleBackColor = true;
+            // 
+            // btnRefund
+            // 
+            this.btnRefund.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRefund.Location = new System.Drawing.Point(6, 464);
+            this.btnRefund.Name = "btnRefund";
+            this.btnRefund.Size = new System.Drawing.Size(105, 41);
+            this.btnRefund.TabIndex = 17;
+            this.btnRefund.Text = "退款";
+            this.btnRefund.UseVisualStyleBackColor = true;
+            // 
+            // btnPaid
+            // 
+            this.btnPaid.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnPaid.Location = new System.Drawing.Point(6, 203);
+            this.btnPaid.Name = "btnPaid";
+            this.btnPaid.Size = new System.Drawing.Size(105, 41);
+            this.btnPaid.TabIndex = 15;
+            this.btnPaid.Text = "已付款";
+            this.btnPaid.UseVisualStyleBackColor = true;
+            // 
+            // lboxPaidOrder
+            // 
+            this.lboxPaidOrder.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lboxPaidOrder.FormattingEnabled = true;
+            this.lboxPaidOrder.ItemHeight = 16;
+            this.lboxPaidOrder.Location = new System.Drawing.Point(6, 278);
+            this.lboxPaidOrder.Name = "lboxPaidOrder";
+            this.lboxPaidOrder.Size = new System.Drawing.Size(484, 180);
+            this.lboxPaidOrder.TabIndex = 16;
+            // 
+            // lboxUnpaidOrder
+            // 
+            this.lboxUnpaidOrder.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lboxUnpaidOrder.FormattingEnabled = true;
+            this.lboxUnpaidOrder.ItemHeight = 16;
+            this.lboxUnpaidOrder.Location = new System.Drawing.Point(6, 17);
+            this.lboxUnpaidOrder.Name = "lboxUnpaidOrder";
+            this.lboxUnpaidOrder.Size = new System.Drawing.Size(484, 180);
+            this.lboxUnpaidOrder.TabIndex = 15;
+            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnLock);
             this.groupBox3.Controls.Add(this.lvStoreMenu);
             this.groupBox3.Controls.Add(this.cbStoreName);
             this.groupBox3.Location = new System.Drawing.Point(274, 7);
@@ -112,6 +179,17 @@
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "店家菜單";
+            // 
+            // btnLock
+            // 
+            this.btnLock.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnLock.Location = new System.Drawing.Point(212, 20);
+            this.btnLock.Name = "btnLock";
+            this.btnLock.Size = new System.Drawing.Size(86, 36);
+            this.btnLock.TabIndex = 15;
+            this.btnLock.Text = "鎖定";
+            this.btnLock.UseVisualStyleBackColor = true;
+            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
             // 
             // lvStoreMenu
             // 
@@ -123,7 +201,7 @@
             // 
             // cbStoreName
             // 
-            this.cbStoreName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.obentoDataSet1, "storeTable.storeName", true));
+            this.cbStoreName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.obentoDataSet, "storeTable.storeName", true));
             this.cbStoreName.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbStoreName.FormattingEnabled = true;
             this.cbStoreName.Location = new System.Drawing.Point(6, 24);
@@ -132,10 +210,10 @@
             this.cbStoreName.TabIndex = 14;
             this.cbStoreName.SelectedIndexChanged += new System.EventHandler(this.cbStoreName_SelectedIndexChanged);
             // 
-            // obentoDataSet1
+            // obentoDataSet
             // 
-            this.obentoDataSet1.DataSetName = "ObentoDataSet1";
-            this.obentoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.obentoDataSet.DataSetName = "ObentoDataSet1";
+            this.obentoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox2
             // 
@@ -175,6 +253,7 @@
             this.btnSend.TabIndex = 13;
             this.btnSend.Text = " 送出";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // btnDelete
             // 
@@ -279,6 +358,7 @@
             this.cbStudentName.Name = "cbStudentName";
             this.cbStudentName.Size = new System.Drawing.Size(153, 32);
             this.cbStudentName.TabIndex = 13;
+            this.cbStudentName.SelectedIndexChanged += new System.EventHandler(this.cbStudentName_SelectedIndexChanged);
             // 
             // chkbox
             // 
@@ -327,43 +407,64 @@
             this.counterPage.Location = new System.Drawing.Point(4, 22);
             this.counterPage.Name = "counterPage";
             this.counterPage.Padding = new System.Windows.Forms.Padding(3);
-            this.counterPage.Size = new System.Drawing.Size(869, 612);
+            this.counterPage.Size = new System.Drawing.Size(1087, 644);
             this.counterPage.TabIndex = 1;
             this.counterPage.Text = "櫃台";
             this.counterPage.UseVisualStyleBackColor = true;
             // 
+            // orderTableBindingSource
+            // 
+            this.orderTableBindingSource.DataMember = "orderTable";
+            this.orderTableBindingSource.DataSource = this.obentoDataSet;
+            // 
             // studentTableBindingSource1
             // 
             this.studentTableBindingSource1.DataMember = "studentTable";
-            this.studentTableBindingSource1.DataSource = this.obentoDataSet1;
+            this.studentTableBindingSource1.DataSource = this.obentoDataSet;
             // 
             // studentTableBindingSource
             // 
             this.studentTableBindingSource.DataMember = "studentTable";
-            this.studentTableBindingSource.DataSource = this.obentoDataSet1;
+            this.studentTableBindingSource.DataSource = this.obentoDataSet;
             // 
             // studentTableTableAdapter
             // 
             this.studentTableTableAdapter.ClearBeforeFill = true;
             // 
+            // orderTableTableAdapter
+            // 
+            this.orderTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.environmentTableTableAdapter = null;
+            this.tableAdapterManager.obentoTableTableAdapter = null;
+            this.tableAdapterManager.orderTableTableAdapter = this.orderTableTableAdapter;
+            this.tableAdapterManager.storeTableTableAdapter = null;
+            this.tableAdapterManager.studentTableTableAdapter = this.studentTableTableAdapter;
+            this.tableAdapterManager.UpdateOrder = ObentoOrderSystemClient.ObentoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 653);
+            this.ClientSize = new System.Drawing.Size(1103, 673);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.studentPage.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.obentoDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obentoDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUD)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentTableBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentTableBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -389,9 +490,9 @@
         private System.Windows.Forms.TabPage counterPage;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button btnCheck;
-        private ObentoDataSet1 obentoDataSet1;
+        private ObentoDataSet obentoDataSet;
         private System.Windows.Forms.BindingSource studentTableBindingSource;
-        private ObentoDataSet1TableAdapters.studentTableTableAdapter studentTableTableAdapter;
+        private ObentoDataSetTableAdapters.studentTableTableAdapter studentTableTableAdapter;
         private System.Windows.Forms.BindingSource studentTableBindingSource1;
         private System.Windows.Forms.ComboBox cbObendoName;
         private System.Windows.Forms.ComboBox cbStudentName;
@@ -400,6 +501,15 @@
         private System.Windows.Forms.ComboBox cbStoreName;
         private System.Windows.Forms.ComboBox cbClassroom;
         private System.Windows.Forms.ListView lvStoreMenu;
+        private System.Windows.Forms.BindingSource orderTableBindingSource;
+        private ObentoDataSetTableAdapters.orderTableTableAdapter orderTableTableAdapter;
+        private ObentoDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ListBox lboxUnpaidOrder;
+        private System.Windows.Forms.Button btnSendSum;
+        private System.Windows.Forms.Button btnRefund;
+        private System.Windows.Forms.Button btnPaid;
+        private System.Windows.Forms.ListBox lboxPaidOrder;
+        private System.Windows.Forms.Button btnLock;
     }
 }
 

@@ -16,21 +16,38 @@ namespace ObentoOrderSystemClient
     public partial class Form1 : Form
     {
         SqlConnectionStringBuilder scsb;
+
+        int studentID = 0;
         public Form1()
         {
             InitializeComponent();
 
+            Initialization();
+        }
+
+        private void Initialization()
+        {
             cbStudentName.Text = "";
             cbStudentName.Enabled = false;
             cbStoreName.Enabled = false;
+            chkbox.Enabled = true;
+            chkbox.Checked = false;
+            btnLock.Enabled = false;
+            btnAdd.Enabled = false;
+
+            cbObendoName.Items.Clear();
+            cbStoreName.Items.Clear();
+            lboxStuOrder.Items.Clear();
+            lvStoreMenu.Items.Clear();
         }
 
         private void chkbox_CheckedChanged(object sender, EventArgs e)
         {
+            cbStoreName.Items.Clear();
             if(chkbox.Checked)
             {
                 cbStoreName.Enabled = true;
-
+                btnLock.Enabled = true;
                 SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
                 string strSQL = "";
 
@@ -55,11 +72,14 @@ namespace ObentoOrderSystemClient
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: 這行程式碼會將資料載入 'obentoDataSet1.orderTable' 資料表。您可以視需要進行移動或移除。
+            this.orderTableTableAdapter.Fill(this.obentoDataSet.orderTable);
             // TODO: 這行程式碼會將資料載入 'obentoDataSet1.studentTable' 資料表。您可以視需要進行移動或移除。
-            this.studentTableTableAdapter.Fill(this.obentoDataSet1.studentTable);
+            this.studentTableTableAdapter.Fill(this.obentoDataSet.studentTable);
             // SQL
             scsb = new SqlConnectionStringBuilder();
-            scsb.DataSource = @".";
+			//scsb.DataSource = @".";
+			scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
             scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
 
@@ -78,18 +98,35 @@ namespace ObentoOrderSystemClient
 
             sqlReader.Close();
             sqlCnct.Close();
+
+            Timer timer = new Timer();
+            timer.Interval = 10 * 1000; // 10 seconds
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Start();
         }
 
-        private void tbStudentID_TextChanged(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
-        }
+            lboxUnpaidOrder.Items.Clear();
+            if (cbClassroom.Text.Length > 0) {
+                ArrayList unpaidOrder = new LinkSQL().loadUnpaidOrder(cbClassroom.Text);
 
-        private void tbStudentName_TextChanged(object sender, EventArgs e)
-        {
+                if (unpaidOrder.Count > 0)
+                {
+                    foreach (string str in unpaidOrder)
+                    {
+                        lboxUnpaidOrder.Items.Add(str);
+                    }
+                }
+            }
         }
 
         private void cbClassroom_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int store_ID = 0;
+
+            Initialization();
+
             cbStudentName.Items.Clear();
             cbStudentName.Text = "";
             cbStudentName.Enabled = true;
@@ -103,13 +140,22 @@ namespace ObentoOrderSystemClient
             SqlCommand sqlCmd = new SqlCommand(strSQL, sqlCnct);
             SqlDataReader sqlReader = sqlCmd.ExecuteReader();
 
-            while (sqlReader.Read())
-            {
-                cbStudentName.Items.Add(sqlReader["stuName"]);
+            if (sqlReader.HasRows) {
+                while (sqlReader.Read())
+                {
+                    cbStudentName.Items.Add(sqlReader["stuName"]);
+                }
             }
 
             sqlReader.Close();
             sqlCnct.Close();
+
+            store_ID = int.Parse(new LinkSQL().getEnvStoreID(cbClassroom.Text));
+            if (store_ID != 0)
+            {
+                cbStoreName.Text = new LinkSQL().getStoreName(store_ID);
+                chkbox.Enabled = false;
+            }
         }
 
         private void cbStoreName_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,39 +167,15 @@ namespace ObentoOrderSystemClient
             // To read image files
             ImageList imageList = new ImageList();
             string storeName = cbStoreName.Text;
-            DirectoryInfo imageDir = new DirectoryInfo(@"C:\obentoImages");
 
-            foreach (FileInfo file in imageDir.GetFiles())
-            {
-                try
-                {
-                    imageList.Images.Add(Image.FromFile(file.FullName));
-                } catch
-                {
-                    Console.WriteLine("This is not an image file");
-                }
-                
-            }
+            imageList = new ReadImages().getImages();
+
             // To collect strings of obento informations from database
-            ArrayList obentoArrayList = new ArrayList();
+            ArrayList obentoArrayList = new LinkSQL().getMenuArrayList(storeName);
 
-            SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
-            string strSQL = "";
-            sqlCnct.Open();
-            strSQL = "select o.obentoName, o.obentoPrice from storeTable as s inner join obentoTable as o on s.storeID = o.storeID where storeName = '"
-                + storeName + "'";
-            SqlCommand sqlCmd = new SqlCommand(strSQL, sqlCnct);
-            SqlDataReader sqlReader = sqlCmd.ExecuteReader();
-
-            while (sqlReader.Read())
-            {
-                Console.WriteLine(sqlReader["obentoName"] + " " + sqlReader["obentoPrice"]);
-                obentoArrayList.Add(sqlReader["obentoName"] + " " + sqlReader["obentoPrice"]);
-                cbObendoName.Items.Add(sqlReader["obentoName"].ToString());
-            }
             foreach (string str in obentoArrayList)
             {
-
+                cbObendoName.Items.Add(str);
                 lvStoreMenu.View = View.LargeIcon;
                 imageList.ImageSize = new Size(64, 64);
                 lvStoreMenu.LargeImageList = imageList;
@@ -162,9 +184,6 @@ namespace ObentoOrderSystemClient
                 lvItem.Text = str;
                 lvStoreMenu.Items.Add(lvItem);
             }
-
-            sqlReader.Close();
-            sqlCnct.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -174,12 +193,16 @@ namespace ObentoOrderSystemClient
                 LinkSQL linkSQL = new LinkSQL();
                 if (lboxStuOrder.Items.Count == 0 && numUD.Value > 0)
                 {
+                    string[] stuOrder = new string[2];
+                    stuOrder = cbObendoName.Text.Split(' ');
                     // if there is no item in the listBox, then add an item
-                    lboxStuOrder.Items.Add(cbObendoName.Text + " " + linkSQL.getObentoPrice(cbStoreName.Text, cbObendoName.Text).ToString() + " * " + numUD.Value.ToString());
+                    lboxStuOrder.Items.Add(stuOrder[0] + " " + linkSQL.getObentoPrice(cbStoreName.Text, cbObendoName.Text) + " * " + numUD.Value.ToString());
                 } else if (lboxStuOrder.FindString(cbObendoName.Text) == -1 && numUD.Value > 0)
                 {
+                    string[] stuOrder = new string[2];
+                    stuOrder = cbObendoName.Text.Split(' ');
                     // if lboxStuOrder.FindString() is -1, means the string is not in the listBox.
-                    lboxStuOrder.Items.Add(cbObendoName.Text + " " + linkSQL.getObentoPrice(cbStoreName.Text, cbObendoName.Text).ToString() + " * " + numUD.Value.ToString());
+                    lboxStuOrder.Items.Add(stuOrder[0] + " " + linkSQL.getObentoPrice(cbStoreName.Text, cbObendoName.Text) + " * " + numUD.Value.ToString());
                 }
             } catch (Exception ex)
             {
@@ -204,12 +227,12 @@ namespace ObentoOrderSystemClient
             LinkSQL linkSQL = new LinkSQL();
             int stuOrderPrice = 0;
             int stuOrderSum = 0;
-            string[] strList = new string[3];
+            string[] strList = new string[4];
 
             foreach (string strLine in lboxStuOrder.Items)
             {
                 strList = strLine.Split(' ');
-                stuOrderPrice = linkSQL.getObentoPrice(cbStoreName.Text, strList[0]);
+                stuOrderPrice = int.Parse(linkSQL.getObentoPrice(cbStoreName.Text, strList[0]));
                 stuOrderSum += stuOrderPrice * int.Parse(strList[3]);
             }
 
@@ -218,6 +241,44 @@ namespace ObentoOrderSystemClient
             btnAdd.Enabled = false;
             btnDelete.Enabled = false;
             btnCheck.Enabled = false;
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            LinkSQL linkSQL = new LinkSQL();
+            string[] strList = new string[4];
+            int obentoID;
+            int countRows = 0;
+            //foreach(string strLine in lboxStuOrder.Items)
+            for(int i = 0; i < lboxStuOrder.Items.Count - 1; i++)
+            {
+                string strLine = lboxStuOrder.Items[i].ToString();
+                strList = strLine.Split(' ');
+                obentoID = linkSQL.getObentoID(strList[0]);
+                countRows += linkSQL.writeOrder(studentID, obentoID, int.Parse(strList[3]));
+            }
+
+            MessageBox.Show(string.Format("共 {0} 筆資料受影響", countRows));
+        }
+
+        private void cbStudentName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            LinkSQL linkSQL = new LinkSQL();
+            studentID = linkSQL.getStudentID(cbStudentName.Text);
+            //MessageBox.Show(studentID.ToString());
+            if(chkbox.Enabled == false && cbStoreName.Text.Length > 0)
+            {
+                btnAdd.Enabled = true;
+                cbStoreName_SelectedIndexChanged(sender, e);
+            }
+        }
+
+        private void btnLock_Click(object sender, EventArgs e)
+        {
+            btnAdd.Enabled = true;
+
+            int countEnvRows = new LinkSQL().setEnv(cbClassroom.Text, cbStoreName.Text);
         }
     }
 }
