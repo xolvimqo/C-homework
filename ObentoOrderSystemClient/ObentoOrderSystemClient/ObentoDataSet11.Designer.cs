@@ -20,9 +20,9 @@ namespace ObentoOrderSystemClient {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ObentoDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ObentoDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ObentoDataSet : global::System.Data.DataSet {
+    public partial class ObentoDataSet1 : global::System.Data.DataSet {
         
         private environmentTableDataTable tableenvironmentTable;
         
@@ -34,19 +34,19 @@ namespace ObentoOrderSystemClient {
         
         private studentTableDataTable tablestudentTable;
         
-        private global::System.Data.DataRelation relationFK__environme__store__1B0907CE;
+        private global::System.Data.DataRelation relationFK__environme__store__73BA3083;
         
-        private global::System.Data.DataRelation relationFK__obentoTab__store__1273C1CD;
+        private global::System.Data.DataRelation relationFK__obentoTab__store__276EDEB3;
         
-        private global::System.Data.DataRelation relationFK__orderTabl__obent__182C9B23;
+        private global::System.Data.DataRelation relationFK__orderTabl__obent__49C3F6B7;
         
-        private global::System.Data.DataRelation relationFK__orderTabl__stuID__173876EA;
+        private global::System.Data.DataRelation relationFK__orderTabl__stuID__4AB81AF0;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public ObentoDataSet() {
+        public ObentoDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -57,7 +57,7 @@ namespace ObentoOrderSystemClient {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected ObentoDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ObentoDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -195,7 +195,7 @@ namespace ObentoOrderSystemClient {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ObentoDataSet cln = ((ObentoDataSet)(base.Clone()));
+            ObentoDataSet1 cln = ((ObentoDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -298,18 +298,18 @@ namespace ObentoOrderSystemClient {
                     this.tablestudentTable.InitVars();
                 }
             }
-            this.relationFK__environme__store__1B0907CE = this.Relations["FK__environme__store__1B0907CE"];
-            this.relationFK__obentoTab__store__1273C1CD = this.Relations["FK__obentoTab__store__1273C1CD"];
-            this.relationFK__orderTabl__obent__182C9B23 = this.Relations["FK__orderTabl__obent__182C9B23"];
-            this.relationFK__orderTabl__stuID__173876EA = this.Relations["FK__orderTabl__stuID__173876EA"];
+            this.relationFK__environme__store__73BA3083 = this.Relations["FK__environme__store__73BA3083"];
+            this.relationFK__obentoTab__store__276EDEB3 = this.Relations["FK__obentoTab__store__276EDEB3"];
+            this.relationFK__orderTabl__obent__49C3F6B7 = this.Relations["FK__orderTabl__obent__49C3F6B7"];
+            this.relationFK__orderTabl__stuID__4AB81AF0 = this.Relations["FK__orderTabl__stuID__4AB81AF0"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ObentoDataSet";
+            this.DataSetName = "ObentoDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ObentoDataSet.xsd";
+            this.Namespace = "http://tempuri.org/ObentoDataSet11.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableenvironmentTable = new environmentTableDataTable();
@@ -322,22 +322,22 @@ namespace ObentoOrderSystemClient {
             base.Tables.Add(this.tablestoreTable);
             this.tablestudentTable = new studentTableDataTable();
             base.Tables.Add(this.tablestudentTable);
-            this.relationFK__environme__store__1B0907CE = new global::System.Data.DataRelation("FK__environme__store__1B0907CE", new global::System.Data.DataColumn[] {
+            this.relationFK__environme__store__73BA3083 = new global::System.Data.DataRelation("FK__environme__store__73BA3083", new global::System.Data.DataColumn[] {
                         this.tablestoreTable.storeIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableenvironmentTable.storeIDColumn}, false);
-            this.Relations.Add(this.relationFK__environme__store__1B0907CE);
-            this.relationFK__obentoTab__store__1273C1CD = new global::System.Data.DataRelation("FK__obentoTab__store__1273C1CD", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__environme__store__73BA3083);
+            this.relationFK__obentoTab__store__276EDEB3 = new global::System.Data.DataRelation("FK__obentoTab__store__276EDEB3", new global::System.Data.DataColumn[] {
                         this.tablestoreTable.storeIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableobentoTable.storeIDColumn}, false);
-            this.Relations.Add(this.relationFK__obentoTab__store__1273C1CD);
-            this.relationFK__orderTabl__obent__182C9B23 = new global::System.Data.DataRelation("FK__orderTabl__obent__182C9B23", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__obentoTab__store__276EDEB3);
+            this.relationFK__orderTabl__obent__49C3F6B7 = new global::System.Data.DataRelation("FK__orderTabl__obent__49C3F6B7", new global::System.Data.DataColumn[] {
                         this.tableobentoTable.obentoIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableorderTable.obentoIDColumn}, false);
-            this.Relations.Add(this.relationFK__orderTabl__obent__182C9B23);
-            this.relationFK__orderTabl__stuID__173876EA = new global::System.Data.DataRelation("FK__orderTabl__stuID__173876EA", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__orderTabl__obent__49C3F6B7);
+            this.relationFK__orderTabl__stuID__4AB81AF0 = new global::System.Data.DataRelation("FK__orderTabl__stuID__4AB81AF0", new global::System.Data.DataColumn[] {
                         this.tablestudentTable.stuIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableorderTable.stuIDColumn}, false);
-            this.Relations.Add(this.relationFK__orderTabl__stuID__173876EA);
+            this.Relations.Add(this.relationFK__orderTabl__stuID__4AB81AF0);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -381,7 +381,7 @@ namespace ObentoOrderSystemClient {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ObentoDataSet ds = new ObentoDataSet();
+            ObentoDataSet1 ds = new ObentoDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -557,15 +557,15 @@ namespace ObentoOrderSystemClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public environmentTableRow AddenvironmentTableRow(int envID, System.DateTime envDate, string classRoom, storeTableRow parentstoreTableRowByFK__environme__store__1B0907CE) {
+            public environmentTableRow AddenvironmentTableRow(int envID, System.DateTime envDate, string classRoom, storeTableRow parentstoreTableRowByFK__environme__store__73BA3083) {
                 environmentTableRow rowenvironmentTableRow = ((environmentTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         envID,
                         envDate,
                         classRoom,
                         null};
-                if ((parentstoreTableRowByFK__environme__store__1B0907CE != null)) {
-                    columnValuesArray[3] = parentstoreTableRowByFK__environme__store__1B0907CE[0];
+                if ((parentstoreTableRowByFK__environme__store__73BA3083 != null)) {
+                    columnValuesArray[3] = parentstoreTableRowByFK__environme__store__73BA3083[0];
                 }
                 rowenvironmentTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowenvironmentTableRow);
@@ -685,7 +685,7 @@ namespace ObentoOrderSystemClient {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ObentoDataSet ds = new ObentoDataSet();
+                ObentoDataSet1 ds = new ObentoDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -861,15 +861,15 @@ namespace ObentoOrderSystemClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public obentoTableRow AddobentoTableRow(int obentoID, string obentoName, int obentoPrice, storeTableRow parentstoreTableRowByFK__obentoTab__store__1273C1CD) {
+            public obentoTableRow AddobentoTableRow(int obentoID, string obentoName, int obentoPrice, storeTableRow parentstoreTableRowByFK__obentoTab__store__276EDEB3) {
                 obentoTableRow rowobentoTableRow = ((obentoTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         obentoID,
                         obentoName,
                         obentoPrice,
                         null};
-                if ((parentstoreTableRowByFK__obentoTab__store__1273C1CD != null)) {
-                    columnValuesArray[3] = parentstoreTableRowByFK__obentoTab__store__1273C1CD[0];
+                if ((parentstoreTableRowByFK__obentoTab__store__276EDEB3 != null)) {
+                    columnValuesArray[3] = parentstoreTableRowByFK__obentoTab__store__276EDEB3[0];
                 }
                 rowobentoTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowobentoTableRow);
@@ -989,7 +989,7 @@ namespace ObentoOrderSystemClient {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ObentoDataSet ds = new ObentoDataSet();
+                ObentoDataSet1 ds = new ObentoDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1175,7 +1175,7 @@ namespace ObentoOrderSystemClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public orderTableRow AddorderTableRow(int orderID, System.DateTime orderDate, studentTableRow parentstudentTableRowByFK__orderTabl__stuID__173876EA, obentoTableRow parentobentoTableRowByFK__orderTabl__obent__182C9B23, int quantity) {
+            public orderTableRow AddorderTableRow(int orderID, System.DateTime orderDate, studentTableRow parentstudentTableRowByFK__orderTabl__stuID__4AB81AF0, obentoTableRow parentobentoTableRowByFK__orderTabl__obent__49C3F6B7, int quantity) {
                 orderTableRow roworderTableRow = ((orderTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         orderID,
@@ -1183,11 +1183,11 @@ namespace ObentoOrderSystemClient {
                         null,
                         null,
                         quantity};
-                if ((parentstudentTableRowByFK__orderTabl__stuID__173876EA != null)) {
-                    columnValuesArray[2] = parentstudentTableRowByFK__orderTabl__stuID__173876EA[0];
+                if ((parentstudentTableRowByFK__orderTabl__stuID__4AB81AF0 != null)) {
+                    columnValuesArray[2] = parentstudentTableRowByFK__orderTabl__stuID__4AB81AF0[0];
                 }
-                if ((parentobentoTableRowByFK__orderTabl__obent__182C9B23 != null)) {
-                    columnValuesArray[3] = parentobentoTableRowByFK__orderTabl__obent__182C9B23[0];
+                if ((parentobentoTableRowByFK__orderTabl__obent__49C3F6B7 != null)) {
+                    columnValuesArray[3] = parentobentoTableRowByFK__orderTabl__obent__49C3F6B7[0];
                 }
                 roworderTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(roworderTableRow);
@@ -1242,6 +1242,8 @@ namespace ObentoOrderSystemClient {
                                 this.columnorderID}, true));
                 this.columnorderID.AllowDBNull = false;
                 this.columnorderID.Unique = true;
+                this.columnstuID.AllowDBNull = false;
+                this.columnobentoID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1309,7 +1311,7 @@ namespace ObentoOrderSystemClient {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ObentoDataSet ds = new ObentoDataSet();
+                ObentoDataSet1 ds = new ObentoDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1384,6 +1386,10 @@ namespace ObentoOrderSystemClient {
             private global::System.Data.DataColumn columnstoreAddress;
             
             private global::System.Data.DataColumn columnPS;
+            
+            private global::System.Data.DataColumn columnisSelected;
+            
+            private global::System.Data.DataColumn columnselectedDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1460,6 +1466,22 @@ namespace ObentoOrderSystemClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn isSelectedColumn {
+                get {
+                    return this.columnisSelected;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn selectedDateColumn {
+                get {
+                    return this.columnselectedDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1495,14 +1517,16 @@ namespace ObentoOrderSystemClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public storeTableRow AddstoreTableRow(int storeID, string storeName, string storeTel, string storeAddress, string PS) {
+            public storeTableRow AddstoreTableRow(int storeID, string storeName, string storeTel, string storeAddress, string PS, int isSelected, System.DateTime selectedDate) {
                 storeTableRow rowstoreTableRow = ((storeTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         storeID,
                         storeName,
                         storeTel,
                         storeAddress,
-                        PS};
+                        PS,
+                        isSelected,
+                        selectedDate};
                 rowstoreTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowstoreTableRow);
                 return rowstoreTableRow;
@@ -1537,6 +1561,8 @@ namespace ObentoOrderSystemClient {
                 this.columnstoreTel = base.Columns["storeTel"];
                 this.columnstoreAddress = base.Columns["storeAddress"];
                 this.columnPS = base.Columns["PS"];
+                this.columnisSelected = base.Columns["isSelected"];
+                this.columnselectedDate = base.Columns["selectedDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1552,12 +1578,16 @@ namespace ObentoOrderSystemClient {
                 base.Columns.Add(this.columnstoreAddress);
                 this.columnPS = new global::System.Data.DataColumn("PS", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPS);
+                this.columnisSelected = new global::System.Data.DataColumn("isSelected", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnisSelected);
+                this.columnselectedDate = new global::System.Data.DataColumn("selectedDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnselectedDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnstoreID}, true));
                 this.columnstoreID.AllowDBNull = false;
                 this.columnstoreID.Unique = true;
                 this.columnstoreName.MaxLength = 50;
-                this.columnstoreTel.MaxLength = 100;
+                this.columnstoreTel.MaxLength = 50;
                 this.columnstoreAddress.MaxLength = 100;
                 this.columnPS.MaxLength = 100;
             }
@@ -1627,7 +1657,7 @@ namespace ObentoOrderSystemClient {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ObentoDataSet ds = new ObentoDataSet();
+                ObentoDataSet1 ds = new ObentoDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1943,7 +1973,7 @@ namespace ObentoOrderSystemClient {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ObentoDataSet ds = new ObentoDataSet();
+                ObentoDataSet1 ds = new ObentoDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2079,10 +2109,10 @@ namespace ObentoOrderSystemClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public storeTableRow storeTableRow {
                 get {
-                    return ((storeTableRow)(this.GetParentRow(this.Table.ParentRelations["FK__environme__store__1B0907CE"])));
+                    return ((storeTableRow)(this.GetParentRow(this.Table.ParentRelations["FK__environme__store__73BA3083"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__environme__store__1B0907CE"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__environme__store__73BA3083"]);
                 }
             }
             
@@ -2200,10 +2230,10 @@ namespace ObentoOrderSystemClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public storeTableRow storeTableRow {
                 get {
-                    return ((storeTableRow)(this.GetParentRow(this.Table.ParentRelations["FK__obentoTab__store__1273C1CD"])));
+                    return ((storeTableRow)(this.GetParentRow(this.Table.ParentRelations["FK__obentoTab__store__276EDEB3"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__obentoTab__store__1273C1CD"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__obentoTab__store__276EDEB3"]);
                 }
             }
             
@@ -2246,11 +2276,11 @@ namespace ObentoOrderSystemClient {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public orderTableRow[] GetorderTableRows() {
-                if ((this.Table.ChildRelations["FK__orderTabl__obent__182C9B23"] == null)) {
+                if ((this.Table.ChildRelations["FK__orderTabl__obent__49C3F6B7"] == null)) {
                     return new orderTableRow[0];
                 }
                 else {
-                    return ((orderTableRow[])(base.GetChildRows(this.Table.ChildRelations["FK__orderTabl__obent__182C9B23"])));
+                    return ((orderTableRow[])(base.GetChildRows(this.Table.ChildRelations["FK__orderTabl__obent__49C3F6B7"])));
                 }
             }
         }
@@ -2300,12 +2330,7 @@ namespace ObentoOrderSystemClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int stuID {
                 get {
-                    try {
-                        return ((int)(this[this.tableorderTable.stuIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'orderTable\' 中資料行 \'stuID\' 的值是 DBNull。", e);
-                    }
+                    return ((int)(this[this.tableorderTable.stuIDColumn]));
                 }
                 set {
                     this[this.tableorderTable.stuIDColumn] = value;
@@ -2316,12 +2341,7 @@ namespace ObentoOrderSystemClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int obentoID {
                 get {
-                    try {
-                        return ((int)(this[this.tableorderTable.obentoIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'orderTable\' 中資料行 \'obentoID\' 的值是 DBNull。", e);
-                    }
+                    return ((int)(this[this.tableorderTable.obentoIDColumn]));
                 }
                 set {
                     this[this.tableorderTable.obentoIDColumn] = value;
@@ -2348,10 +2368,10 @@ namespace ObentoOrderSystemClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public obentoTableRow obentoTableRow {
                 get {
-                    return ((obentoTableRow)(this.GetParentRow(this.Table.ParentRelations["FK__orderTabl__obent__182C9B23"])));
+                    return ((obentoTableRow)(this.GetParentRow(this.Table.ParentRelations["FK__orderTabl__obent__49C3F6B7"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__orderTabl__obent__182C9B23"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__orderTabl__obent__49C3F6B7"]);
                 }
             }
             
@@ -2359,10 +2379,10 @@ namespace ObentoOrderSystemClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public studentTableRow studentTableRow {
                 get {
-                    return ((studentTableRow)(this.GetParentRow(this.Table.ParentRelations["FK__orderTabl__stuID__173876EA"])));
+                    return ((studentTableRow)(this.GetParentRow(this.Table.ParentRelations["FK__orderTabl__stuID__4AB81AF0"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__orderTabl__stuID__173876EA"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__orderTabl__stuID__4AB81AF0"]);
                 }
             }
             
@@ -2376,30 +2396,6 @@ namespace ObentoOrderSystemClient {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetorderDateNull() {
                 this[this.tableorderTable.orderDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsstuIDNull() {
-                return this.IsNull(this.tableorderTable.stuIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetstuIDNull() {
-                this[this.tableorderTable.stuIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsobentoIDNull() {
-                return this.IsNull(this.tableorderTable.obentoIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetobentoIDNull() {
-                this[this.tableorderTable.obentoIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2506,6 +2502,38 @@ namespace ObentoOrderSystemClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int isSelected {
+                get {
+                    try {
+                        return ((int)(this[this.tablestoreTable.isSelectedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("資料表 \'storeTable\' 中資料行 \'isSelected\' 的值是 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tablestoreTable.isSelectedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime selectedDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablestoreTable.selectedDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("資料表 \'storeTable\' 中資料行 \'selectedDate\' 的值是 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tablestoreTable.selectedDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsstoreNameNull() {
                 return this.IsNull(this.tablestoreTable.storeNameColumn);
             }
@@ -2554,23 +2582,47 @@ namespace ObentoOrderSystemClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsisSelectedNull() {
+                return this.IsNull(this.tablestoreTable.isSelectedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetisSelectedNull() {
+                this[this.tablestoreTable.isSelectedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsselectedDateNull() {
+                return this.IsNull(this.tablestoreTable.selectedDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetselectedDateNull() {
+                this[this.tablestoreTable.selectedDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public environmentTableRow[] GetenvironmentTableRows() {
-                if ((this.Table.ChildRelations["FK__environme__store__1B0907CE"] == null)) {
+                if ((this.Table.ChildRelations["FK__environme__store__73BA3083"] == null)) {
                     return new environmentTableRow[0];
                 }
                 else {
-                    return ((environmentTableRow[])(base.GetChildRows(this.Table.ChildRelations["FK__environme__store__1B0907CE"])));
+                    return ((environmentTableRow[])(base.GetChildRows(this.Table.ChildRelations["FK__environme__store__73BA3083"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public obentoTableRow[] GetobentoTableRows() {
-                if ((this.Table.ChildRelations["FK__obentoTab__store__1273C1CD"] == null)) {
+                if ((this.Table.ChildRelations["FK__obentoTab__store__276EDEB3"] == null)) {
                     return new obentoTableRow[0];
                 }
                 else {
-                    return ((obentoTableRow[])(base.GetChildRows(this.Table.ChildRelations["FK__obentoTab__store__1273C1CD"])));
+                    return ((obentoTableRow[])(base.GetChildRows(this.Table.ChildRelations["FK__obentoTab__store__276EDEB3"])));
                 }
             }
         }
@@ -2715,11 +2767,11 @@ namespace ObentoOrderSystemClient {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public orderTableRow[] GetorderTableRows() {
-                if ((this.Table.ChildRelations["FK__orderTabl__stuID__173876EA"] == null)) {
+                if ((this.Table.ChildRelations["FK__orderTabl__stuID__4AB81AF0"] == null)) {
                     return new orderTableRow[0];
                 }
                 else {
-                    return ((orderTableRow[])(base.GetChildRows(this.Table.ChildRelations["FK__orderTabl__stuID__173876EA"])));
+                    return ((orderTableRow[])(base.GetChildRows(this.Table.ChildRelations["FK__orderTabl__stuID__4AB81AF0"])));
                 }
             }
         }
@@ -2895,7 +2947,7 @@ namespace ObentoOrderSystemClient {
         }
     }
 }
-namespace ObentoOrderSystemClient.ObentoDataSetTableAdapters {
+namespace ObentoOrderSystemClient.ObentoDataSet1TableAdapters {
     
     
     /// <summary>
@@ -3067,7 +3119,7 @@ SELECT envID, envDate, classRoom, storeID FROM environmentTable WHERE (envID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ObentoOrderSystemClient.Properties.Settings.Default.ObentoConnectionString1;
+            this._connection.ConnectionString = global::ObentoOrderSystemClient.Properties.Settings.Default.ObentoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3084,7 +3136,7 @@ SELECT envID, envDate, classRoom, storeID FROM environmentTable WHERE (envID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ObentoDataSet.environmentTableDataTable dataTable) {
+        public virtual int Fill(ObentoDataSet1.environmentTableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3097,9 +3149,9 @@ SELECT envID, envDate, classRoom, storeID FROM environmentTable WHERE (envID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ObentoDataSet.environmentTableDataTable GetData() {
+        public virtual ObentoDataSet1.environmentTableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ObentoDataSet.environmentTableDataTable dataTable = new ObentoDataSet.environmentTableDataTable();
+            ObentoDataSet1.environmentTableDataTable dataTable = new ObentoDataSet1.environmentTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3107,14 +3159,14 @@ SELECT envID, envDate, classRoom, storeID FROM environmentTable WHERE (envID = @
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ObentoDataSet.environmentTableDataTable dataTable) {
+        public virtual int Update(ObentoDataSet1.environmentTableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ObentoDataSet dataSet) {
+        public virtual int Update(ObentoDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "environmentTable");
         }
         
@@ -3462,7 +3514,7 @@ SELECT obentoID, obentoName, obentoPrice, storeID FROM obentoTable WHERE (obento
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ObentoOrderSystemClient.Properties.Settings.Default.ObentoConnectionString1;
+            this._connection.ConnectionString = global::ObentoOrderSystemClient.Properties.Settings.Default.ObentoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3479,7 +3531,7 @@ SELECT obentoID, obentoName, obentoPrice, storeID FROM obentoTable WHERE (obento
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ObentoDataSet.obentoTableDataTable dataTable) {
+        public virtual int Fill(ObentoDataSet1.obentoTableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3492,9 +3544,9 @@ SELECT obentoID, obentoName, obentoPrice, storeID FROM obentoTable WHERE (obento
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ObentoDataSet.obentoTableDataTable GetData() {
+        public virtual ObentoDataSet1.obentoTableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ObentoDataSet.obentoTableDataTable dataTable = new ObentoDataSet.obentoTableDataTable();
+            ObentoDataSet1.obentoTableDataTable dataTable = new ObentoDataSet1.obentoTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3502,14 +3554,14 @@ SELECT obentoID, obentoName, obentoPrice, storeID FROM obentoTable WHERE (obento
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ObentoDataSet.obentoTableDataTable dataTable) {
+        public virtual int Update(ObentoDataSet1.obentoTableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ObentoDataSet dataSet) {
+        public virtual int Update(ObentoDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "obentoTable");
         }
         
@@ -3817,14 +3869,12 @@ SELECT obentoID, obentoName, obentoPrice, storeID FROM obentoTable WHERE (obento
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[orderTable] WHERE (([orderID] = @Original_orderID) AND ((@IsNull_orderDate = 1 AND [orderDate] IS NULL) OR ([orderDate] = @Original_orderDate)) AND ((@IsNull_stuID = 1 AND [stuID] IS NULL) OR ([stuID] = @Original_stuID)) AND ((@IsNull_obentoID = 1 AND [obentoID] IS NULL) OR ([obentoID] = @Original_obentoID)) AND ((@IsNull_quantity = 1 AND [quantity] IS NULL) OR ([quantity] = @Original_quantity)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[orderTable] WHERE (([orderID] = @Original_orderID) AND ((@IsNull_orderDate = 1 AND [orderDate] IS NULL) OR ([orderDate] = @Original_orderDate)) AND ([stuID] = @Original_stuID) AND ([obentoID] = @Original_obentoID) AND ((@IsNull_quantity = 1 AND [quantity] IS NULL) OR ([quantity] = @Original_quantity)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_orderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "orderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_orderDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "orderDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_orderDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "orderDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_stuID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stuID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_stuID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stuID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_obentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "obentoID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_obentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "obentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3842,7 +3892,7 @@ SELECT obentoID, obentoName, obentoPrice, storeID FROM obentoTable WHERE (obento
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[orderTable] SET [orderID] = @orderID, [orderDate] = @orderDate, [stuID] = @stuID, [obentoID] = @obentoID, [quantity] = @quantity WHERE (([orderID] = @Original_orderID) AND ((@IsNull_orderDate = 1 AND [orderDate] IS NULL) OR ([orderDate] = @Original_orderDate)) AND ((@IsNull_stuID = 1 AND [stuID] IS NULL) OR ([stuID] = @Original_stuID)) AND ((@IsNull_obentoID = 1 AND [obentoID] IS NULL) OR ([obentoID] = @Original_obentoID)) AND ((@IsNull_quantity = 1 AND [quantity] IS NULL) OR ([quantity] = @Original_quantity)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[orderTable] SET [orderID] = @orderID, [orderDate] = @orderDate, [stuID] = @stuID, [obentoID] = @obentoID, [quantity] = @quantity WHERE (([orderID] = @Original_orderID) AND ((@IsNull_orderDate = 1 AND [orderDate] IS NULL) OR ([orderDate] = @Original_orderDate)) AND ([stuID] = @Original_stuID) AND ([obentoID] = @Original_obentoID) AND ((@IsNull_quantity = 1 AND [quantity] IS NULL) OR ([quantity] = @Original_quantity)));
 SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orderID = @orderID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@orderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "orderID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3853,9 +3903,7 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_orderID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "orderID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_orderDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "orderDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_orderDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "orderDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_stuID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stuID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_stuID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stuID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_obentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "obentoID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_obentoID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "obentoID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3865,7 +3913,7 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ObentoOrderSystemClient.Properties.Settings.Default.ObentoConnectionString1;
+            this._connection.ConnectionString = global::ObentoOrderSystemClient.Properties.Settings.Default.ObentoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3882,7 +3930,7 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ObentoDataSet.orderTableDataTable dataTable) {
+        public virtual int Fill(ObentoDataSet1.orderTableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3895,9 +3943,9 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ObentoDataSet.orderTableDataTable GetData() {
+        public virtual ObentoDataSet1.orderTableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ObentoDataSet.orderTableDataTable dataTable = new ObentoDataSet.orderTableDataTable();
+            ObentoDataSet1.orderTableDataTable dataTable = new ObentoDataSet1.orderTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3905,14 +3953,14 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ObentoDataSet.orderTableDataTable dataTable) {
+        public virtual int Update(ObentoDataSet1.orderTableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ObentoDataSet dataSet) {
+        public virtual int Update(ObentoDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "orderTable");
         }
         
@@ -3935,7 +3983,7 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_orderID, global::System.Nullable<global::System.DateTime> Original_orderDate, global::System.Nullable<int> Original_stuID, global::System.Nullable<int> Original_obentoID, global::System.Nullable<int> Original_quantity) {
+        public virtual int Delete(int Original_orderID, global::System.Nullable<global::System.DateTime> Original_orderDate, int Original_stuID, int Original_obentoID, global::System.Nullable<int> Original_quantity) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_orderID));
             if ((Original_orderDate.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -3945,29 +3993,15 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_stuID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_stuID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_obentoID.HasValue == true)) {
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_stuID));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_obentoID));
+            if ((Original_quantity.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_obentoID.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_quantity.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Original_quantity.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_quantity.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3989,7 +4023,7 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int orderID, global::System.Nullable<global::System.DateTime> orderDate, global::System.Nullable<int> stuID, global::System.Nullable<int> obentoID, global::System.Nullable<int> quantity) {
+        public virtual int Insert(int orderID, global::System.Nullable<global::System.DateTime> orderDate, int stuID, int obentoID, global::System.Nullable<int> quantity) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(orderID));
             if ((orderDate.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(orderDate.Value));
@@ -3997,18 +4031,8 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((stuID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(stuID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((obentoID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(obentoID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(stuID));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(obentoID));
             if ((quantity.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((int)(quantity.Value));
             }
@@ -4035,7 +4059,7 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int orderID, global::System.Nullable<global::System.DateTime> orderDate, global::System.Nullable<int> stuID, global::System.Nullable<int> obentoID, global::System.Nullable<int> quantity, int Original_orderID, global::System.Nullable<global::System.DateTime> Original_orderDate, global::System.Nullable<int> Original_stuID, global::System.Nullable<int> Original_obentoID, global::System.Nullable<int> Original_quantity) {
+        public virtual int Update(int orderID, global::System.Nullable<global::System.DateTime> orderDate, int stuID, int obentoID, global::System.Nullable<int> quantity, int Original_orderID, global::System.Nullable<global::System.DateTime> Original_orderDate, int Original_stuID, int Original_obentoID, global::System.Nullable<int> Original_quantity) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(orderID));
             if ((orderDate.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(orderDate.Value));
@@ -4043,18 +4067,8 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((stuID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(stuID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((obentoID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(obentoID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(stuID));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(obentoID));
             if ((quantity.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(quantity.Value));
             }
@@ -4070,29 +4084,15 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Original_stuID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_stuID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_obentoID.HasValue == true)) {
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_stuID));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_obentoID));
+            if ((Original_quantity.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_obentoID.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_quantity.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            if ((Original_quantity.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_quantity.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4114,7 +4114,7 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> orderDate, global::System.Nullable<int> stuID, global::System.Nullable<int> obentoID, global::System.Nullable<int> quantity, int Original_orderID, global::System.Nullable<global::System.DateTime> Original_orderDate, global::System.Nullable<int> Original_stuID, global::System.Nullable<int> Original_obentoID, global::System.Nullable<int> Original_quantity) {
+        public virtual int Update(global::System.Nullable<global::System.DateTime> orderDate, int stuID, int obentoID, global::System.Nullable<int> quantity, int Original_orderID, global::System.Nullable<global::System.DateTime> Original_orderDate, int Original_stuID, int Original_obentoID, global::System.Nullable<int> Original_quantity) {
             return this.Update(Original_orderID, orderDate, stuID, obentoID, quantity, Original_orderID, Original_orderDate, Original_stuID, Original_obentoID, Original_quantity);
         }
     }
@@ -4245,10 +4245,12 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
             tableMapping.ColumnMappings.Add("storeTel", "storeTel");
             tableMapping.ColumnMappings.Add("storeAddress", "storeAddress");
             tableMapping.ColumnMappings.Add("PS", "PS");
+            tableMapping.ColumnMappings.Add("isSelected", "isSelected");
+            tableMapping.ColumnMappings.Add("selectedDate", "selectedDate");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[storeTable] WHERE (([storeID] = @Original_storeID) AND ((@IsNull_storeName = 1 AND [storeName] IS NULL) OR ([storeName] = @Original_storeName)) AND ((@IsNull_storeTel = 1 AND [storeTel] IS NULL) OR ([storeTel] = @Original_storeTel)) AND ((@IsNull_storeAddress = 1 AND [storeAddress] IS NULL) OR ([storeAddress] = @Original_storeAddress)) AND ((@IsNull_PS = 1 AND [PS] IS NULL) OR ([PS] = @Original_PS)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[storeTable] WHERE (([storeID] = @Original_storeID) AND ((@IsNull_storeName = 1 AND [storeName] IS NULL) OR ([storeName] = @Original_storeName)) AND ((@IsNull_storeTel = 1 AND [storeTel] IS NULL) OR ([storeTel] = @Original_storeTel)) AND ((@IsNull_storeAddress = 1 AND [storeAddress] IS NULL) OR ([storeAddress] = @Original_storeAddress)) AND ((@IsNull_PS = 1 AND [PS] IS NULL) OR ([PS] = @Original_PS)) AND ((@IsNull_isSelected = 1 AND [isSelected] IS NULL) OR ([isSelected] = @Original_isSelected)) AND ((@IsNull_selectedDate = 1 AND [selectedDate] IS NULL) OR ([selectedDate] = @Original_selectedDate)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_storeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_storeName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4259,28 +4261,34 @@ SELECT orderID, orderDate, stuID, obentoID, quantity FROM orderTable WHERE (orde
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_storeAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PS", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_isSelected", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isSelected", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isSelected", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isSelected", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_selectedDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "selectedDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_selectedDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "selectedDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[storeTable] ([storeID], [storeName], [storeTel], [storeAddress" +
-                "], [PS]) VALUES (@storeID, @storeName, @storeTel, @storeAddress, @PS);\r\nSELECT s" +
-                "toreID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (storeID = @" +
-                "storeID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[storeTable] ([storeID], [storeName], [storeTel], [storeAddress], [PS], [isSelected], [selectedDate]) VALUES (@storeID, @storeName, @storeTel, @storeAddress, @PS, @isSelected, @selectedDate);
+SELECT storeID, storeName, storeTel, storeAddress, PS, isSelected, selectedDate FROM storeTable WHERE (storeID = @storeID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@storeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@storeName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@storeTel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeTel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@storeAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isSelected", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isSelected", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@selectedDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "selectedDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[storeTable] SET [storeID] = @storeID, [storeName] = @storeName, [storeTel] = @storeTel, [storeAddress] = @storeAddress, [PS] = @PS WHERE (([storeID] = @Original_storeID) AND ((@IsNull_storeName = 1 AND [storeName] IS NULL) OR ([storeName] = @Original_storeName)) AND ((@IsNull_storeTel = 1 AND [storeTel] IS NULL) OR ([storeTel] = @Original_storeTel)) AND ((@IsNull_storeAddress = 1 AND [storeAddress] IS NULL) OR ([storeAddress] = @Original_storeAddress)) AND ((@IsNull_PS = 1 AND [PS] IS NULL) OR ([PS] = @Original_PS)));
-SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (storeID = @storeID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[storeTable] SET [storeID] = @storeID, [storeName] = @storeName, [storeTel] = @storeTel, [storeAddress] = @storeAddress, [PS] = @PS, [isSelected] = @isSelected, [selectedDate] = @selectedDate WHERE (([storeID] = @Original_storeID) AND ((@IsNull_storeName = 1 AND [storeName] IS NULL) OR ([storeName] = @Original_storeName)) AND ((@IsNull_storeTel = 1 AND [storeTel] IS NULL) OR ([storeTel] = @Original_storeTel)) AND ((@IsNull_storeAddress = 1 AND [storeAddress] IS NULL) OR ([storeAddress] = @Original_storeAddress)) AND ((@IsNull_PS = 1 AND [PS] IS NULL) OR ([PS] = @Original_PS)) AND ((@IsNull_isSelected = 1 AND [isSelected] IS NULL) OR ([isSelected] = @Original_isSelected)) AND ((@IsNull_selectedDate = 1 AND [selectedDate] IS NULL) OR ([selectedDate] = @Original_selectedDate)));
+SELECT storeID, storeName, storeTel, storeAddress, PS, isSelected, selectedDate FROM storeTable WHERE (storeID = @storeID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@storeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@storeName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@storeTel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeTel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@storeAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isSelected", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isSelected", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@selectedDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "selectedDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_storeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_storeName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_storeName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4290,13 +4298,17 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_storeAddress", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "storeAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PS", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PS", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_isSelected", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isSelected", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isSelected", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isSelected", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_selectedDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "selectedDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_selectedDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "selectedDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ObentoOrderSystemClient.Properties.Settings.Default.ObentoConnectionString1;
+            this._connection.ConnectionString = global::ObentoOrderSystemClient.Properties.Settings.Default.ObentoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4305,7 +4317,8 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT storeID, storeName, storeTel, storeAddress, PS FROM dbo.storeTable";
+            this._commandCollection[0].CommandText = "SELECT storeID, storeName, storeTel, storeAddress, PS, isSelected, selectedDate F" +
+                "ROM dbo.storeTable";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4313,7 +4326,7 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ObentoDataSet.storeTableDataTable dataTable) {
+        public virtual int Fill(ObentoDataSet1.storeTableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4326,9 +4339,9 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ObentoDataSet.storeTableDataTable GetData() {
+        public virtual ObentoDataSet1.storeTableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ObentoDataSet.storeTableDataTable dataTable = new ObentoDataSet.storeTableDataTable();
+            ObentoDataSet1.storeTableDataTable dataTable = new ObentoDataSet1.storeTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4336,14 +4349,14 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ObentoDataSet.storeTableDataTable dataTable) {
+        public virtual int Update(ObentoDataSet1.storeTableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ObentoDataSet dataSet) {
+        public virtual int Update(ObentoDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "storeTable");
         }
         
@@ -4366,7 +4379,7 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_storeID, string Original_storeName, string Original_storeTel, string Original_storeAddress, string Original_PS) {
+        public virtual int Delete(int Original_storeID, string Original_storeName, string Original_storeTel, string Original_storeAddress, string Original_PS, global::System.Nullable<int> Original_isSelected, global::System.Nullable<global::System.DateTime> Original_selectedDate) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_storeID));
             if ((Original_storeName == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -4400,6 +4413,22 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_PS));
             }
+            if ((Original_isSelected.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_isSelected.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_selectedDate.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_selectedDate.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4420,7 +4449,7 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int storeID, string storeName, string storeTel, string storeAddress, string PS) {
+        public virtual int Insert(int storeID, string storeName, string storeTel, string storeAddress, string PS, global::System.Nullable<int> isSelected, global::System.Nullable<global::System.DateTime> selectedDate) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(storeID));
             if ((storeName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -4446,6 +4475,18 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(PS));
             }
+            if ((isSelected.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(isSelected.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((selectedDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(selectedDate.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4466,7 +4507,7 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int storeID, string storeName, string storeTel, string storeAddress, string PS, int Original_storeID, string Original_storeName, string Original_storeTel, string Original_storeAddress, string Original_PS) {
+        public virtual int Update(int storeID, string storeName, string storeTel, string storeAddress, string PS, global::System.Nullable<int> isSelected, global::System.Nullable<global::System.DateTime> selectedDate, int Original_storeID, string Original_storeName, string Original_storeTel, string Original_storeAddress, string Original_PS, global::System.Nullable<int> Original_isSelected, global::System.Nullable<global::System.DateTime> Original_selectedDate) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(storeID));
             if ((storeName == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -4492,38 +4533,66 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(PS));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_storeID));
-            if ((Original_storeName == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            if ((isSelected.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(isSelected.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_storeName));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Original_storeTel == null)) {
+            if ((selectedDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(selectedDate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_storeID));
+            if ((Original_storeName == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_storeTel));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_storeName));
             }
-            if ((Original_storeAddress == null)) {
+            if ((Original_storeTel == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_storeAddress));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_storeTel));
             }
-            if ((Original_PS == null)) {
+            if ((Original_storeAddress == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_PS));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_storeAddress));
+            }
+            if ((Original_PS == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_PS));
+            }
+            if ((Original_isSelected.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_isSelected.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_selectedDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_selectedDate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4545,8 +4614,8 @@ SELECT storeID, storeName, storeTel, storeAddress, PS FROM storeTable WHERE (sto
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string storeName, string storeTel, string storeAddress, string PS, int Original_storeID, string Original_storeName, string Original_storeTel, string Original_storeAddress, string Original_PS) {
-            return this.Update(Original_storeID, storeName, storeTel, storeAddress, PS, Original_storeID, Original_storeName, Original_storeTel, Original_storeAddress, Original_PS);
+        public virtual int Update(string storeName, string storeTel, string storeAddress, string PS, global::System.Nullable<int> isSelected, global::System.Nullable<global::System.DateTime> selectedDate, int Original_storeID, string Original_storeName, string Original_storeTel, string Original_storeAddress, string Original_PS, global::System.Nullable<int> Original_isSelected, global::System.Nullable<global::System.DateTime> Original_selectedDate) {
+            return this.Update(Original_storeID, storeName, storeTel, storeAddress, PS, isSelected, selectedDate, Original_storeID, Original_storeName, Original_storeTel, Original_storeAddress, Original_PS, Original_isSelected, Original_selectedDate);
         }
     }
     
@@ -4727,7 +4796,7 @@ SELECT stuId, classRoom, stuName, isOnDuty, dutyDate FROM studentTable WHERE (st
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::ObentoOrderSystemClient.Properties.Settings.Default.ObentoConnectionString1;
+            this._connection.ConnectionString = global::ObentoOrderSystemClient.Properties.Settings.Default.ObentoConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4744,7 +4813,7 @@ SELECT stuId, classRoom, stuName, isOnDuty, dutyDate FROM studentTable WHERE (st
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ObentoDataSet.studentTableDataTable dataTable) {
+        public virtual int Fill(ObentoDataSet1.studentTableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4757,9 +4826,9 @@ SELECT stuId, classRoom, stuName, isOnDuty, dutyDate FROM studentTable WHERE (st
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ObentoDataSet.studentTableDataTable GetData() {
+        public virtual ObentoDataSet1.studentTableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ObentoDataSet.studentTableDataTable dataTable = new ObentoDataSet.studentTableDataTable();
+            ObentoDataSet1.studentTableDataTable dataTable = new ObentoDataSet1.studentTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4767,14 +4836,14 @@ SELECT stuId, classRoom, stuName, isOnDuty, dutyDate FROM studentTable WHERE (st
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ObentoDataSet.studentTableDataTable dataTable) {
+        public virtual int Update(ObentoDataSet1.studentTableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ObentoDataSet dataSet) {
+        public virtual int Update(ObentoDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "studentTable");
         }
         
@@ -5164,7 +5233,7 @@ SELECT stuId, classRoom, stuName, isOnDuty, dutyDate FROM studentTable WHERE (st
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(ObentoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ObentoDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._storeTableTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.storeTable.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -5219,7 +5288,7 @@ SELECT stuId, classRoom, stuName, isOnDuty, dutyDate FROM studentTable WHERE (st
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(ObentoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ObentoDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._storeTableTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.storeTable.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -5269,7 +5338,7 @@ SELECT stuId, classRoom, stuName, isOnDuty, dutyDate FROM studentTable WHERE (st
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(ObentoDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ObentoDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._orderTableTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.orderTable.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -5343,7 +5412,7 @@ SELECT stuId, classRoom, stuName, isOnDuty, dutyDate FROM studentTable WHERE (st
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(ObentoDataSet dataSet) {
+        public virtual int UpdateAll(ObentoDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

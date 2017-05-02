@@ -41,7 +41,7 @@
             this.btnLock = new System.Windows.Forms.Button();
             this.lvStoreMenu = new System.Windows.Forms.ListView();
             this.cbStoreName = new System.Windows.Forms.ComboBox();
-            this.obentoDataSet = new ObentoOrderSystemClient.ObentoDataSet();
+            this.obentoDataSet = new ObentoOrderSystemClient.ObentoDataSet1();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCheck = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
@@ -63,9 +63,9 @@
             this.orderTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.studentTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableTableAdapter = new ObentoOrderSystemClient.ObentoDataSetTableAdapters.studentTableTableAdapter();
-            this.orderTableTableAdapter = new ObentoOrderSystemClient.ObentoDataSetTableAdapters.orderTableTableAdapter();
-            this.tableAdapterManager = new ObentoOrderSystemClient.ObentoDataSetTableAdapters.TableAdapterManager();
+            this.studentTableTableAdapter = new ObentoOrderSystemClient.ObentoDataSet1TableAdapters.studentTableTableAdapter();
+            this.orderTableTableAdapter = new ObentoOrderSystemClient.ObentoDataSet1TableAdapters.orderTableTableAdapter();
+            this.tableAdapterManager = new ObentoOrderSystemClient.ObentoDataSet1TableAdapters.TableAdapterManager();
             this.tabControl1.SuspendLayout();
             this.studentPage.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -137,6 +137,7 @@
             this.btnRefund.TabIndex = 17;
             this.btnRefund.Text = "退款";
             this.btnRefund.UseVisualStyleBackColor = true;
+            this.btnRefund.Click += new System.EventHandler(this.btnRefund_Click);
             // 
             // btnPaid
             // 
@@ -147,6 +148,7 @@
             this.btnPaid.TabIndex = 15;
             this.btnPaid.Text = "已付款";
             this.btnPaid.UseVisualStyleBackColor = true;
+            this.btnPaid.Click += new System.EventHandler(this.btnPaid_Click);
             // 
             // lboxPaidOrder
             // 
@@ -443,7 +445,7 @@
             this.tableAdapterManager.orderTableTableAdapter = this.orderTableTableAdapter;
             this.tableAdapterManager.storeTableTableAdapter = null;
             this.tableAdapterManager.studentTableTableAdapter = this.studentTableTableAdapter;
-            this.tableAdapterManager.UpdateOrder = ObentoOrderSystemClient.ObentoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = ObentoOrderSystemClient.ObentoDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Form1
             // 
@@ -490,9 +492,9 @@
         private System.Windows.Forms.TabPage counterPage;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button btnCheck;
-        private ObentoDataSet obentoDataSet;
+        private ObentoDataSet1 obentoDataSet;
         private System.Windows.Forms.BindingSource studentTableBindingSource;
-        private ObentoDataSetTableAdapters.studentTableTableAdapter studentTableTableAdapter;
+        private ObentoDataSet1TableAdapters.studentTableTableAdapter studentTableTableAdapter;
         private System.Windows.Forms.BindingSource studentTableBindingSource1;
         private System.Windows.Forms.ComboBox cbObendoName;
         private System.Windows.Forms.ComboBox cbStudentName;
@@ -502,8 +504,8 @@
         private System.Windows.Forms.ComboBox cbClassroom;
         private System.Windows.Forms.ListView lvStoreMenu;
         private System.Windows.Forms.BindingSource orderTableBindingSource;
-        private ObentoDataSetTableAdapters.orderTableTableAdapter orderTableTableAdapter;
-        private ObentoDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private ObentoDataSet1TableAdapters.orderTableTableAdapter orderTableTableAdapter;
+        private ObentoDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.ListBox lboxUnpaidOrder;
         private System.Windows.Forms.Button btnSendSum;
         private System.Windows.Forms.Button btnRefund;

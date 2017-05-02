@@ -16,8 +16,8 @@ namespace ObentoOrderSystemClient
         public string getObentoPrice(string storeName, string obentoName) {
             SqlConnectionStringBuilder scsb;
             scsb = new SqlConnectionStringBuilder();
-			//scsb.DataSource = @".";
-			scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+			scsb.DataSource = @".";
+			//scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
 			scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
@@ -46,8 +46,8 @@ namespace ObentoOrderSystemClient
 
             SqlConnectionStringBuilder scsb;
             scsb = new SqlConnectionStringBuilder();
-			//scsb.DataSource = @".";
-			scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+			scsb.DataSource = @".";
+			//scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
 			scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
@@ -76,8 +76,8 @@ namespace ObentoOrderSystemClient
 
             SqlConnectionStringBuilder scsb;
             scsb = new SqlConnectionStringBuilder();
-			//scsb.DataSource = @".";
-			scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+			scsb.DataSource = @".";
+			//scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
 			scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
@@ -105,8 +105,8 @@ namespace ObentoOrderSystemClient
 
             SqlConnectionStringBuilder scsb;
             scsb = new SqlConnectionStringBuilder();
-            //scsb.DataSource = @".";
-            scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+            scsb.DataSource = @".";
+            //scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
             scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
@@ -134,8 +134,8 @@ namespace ObentoOrderSystemClient
 
             SqlConnectionStringBuilder scsb;
             scsb = new SqlConnectionStringBuilder();
-			//scsb.DataSource = @".";
-			scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+			scsb.DataSource = @".";
+			//scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
 			scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
@@ -163,8 +163,8 @@ namespace ObentoOrderSystemClient
 
             SqlConnectionStringBuilder scsb;
             scsb = new SqlConnectionStringBuilder();
-            //scsb.DataSource = @".";
-            scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+            scsb.DataSource = @".";
+            //scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
             scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
@@ -192,21 +192,46 @@ namespace ObentoOrderSystemClient
 
             SqlConnectionStringBuilder scsb;
             scsb = new SqlConnectionStringBuilder();
-			//scsb.DataSource = @".";
-			scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+			scsb.DataSource = @".";
+			//scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
 			scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
 
             sqlCnct.Open();
-            strSQL = "insert into orderTable values (@orderID, @orderDate, @studentID, @obentoID, @quantity)";
+            strSQL = "insert into orderTable values (@orderID, @orderDate, @studentID, @obentoID, @quantity, @paymentState)";
             SqlCommand sqlCmd = new SqlCommand(strSQL, sqlCnct);
             sqlCmd.Parameters.AddWithValue("@orderID", order_ID);
             sqlCmd.Parameters.AddWithValue("@orderDate", DateTime.Now);
             sqlCmd.Parameters.AddWithValue("@studentID", student_ID);
             sqlCmd.Parameters.AddWithValue("@obentoID", obento_ID);
             sqlCmd.Parameters.AddWithValue("@quantity", quantity);
+            sqlCmd.Parameters.AddWithValue("@paymentState", 0); // only value = 1 is paid
             int row = sqlCmd.ExecuteNonQuery();
+            sqlCnct.Close();
+
+            return row;
+        }
+
+        public int changePaymentState(string student_Name, int paymentState)
+        {
+            int row = 0;
+            int student_ID = this.getStudentID(student_Name);
+            string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd");
+            SqlConnectionStringBuilder scsb;
+            scsb = new SqlConnectionStringBuilder();
+            scsb.DataSource = @".";
+            //scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+            scsb.InitialCatalog = "Obento";
+            scsb.IntegratedSecurity = true;
+            SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
+
+            sqlCnct.Open();
+            //strSQL = "insert into orderTable values (@orderID, @orderDate, @studentID, @obentoID, @quantity, @paymentState)";
+            strSQL = "update orderTable set paid=@paymentState where cast(orderDate as date) = '" + sqlFormattedDate + "' and stuID = " + student_ID.ToString() + ";";
+            SqlCommand sqlCmd = new SqlCommand(strSQL, sqlCnct);
+            sqlCmd.Parameters.AddWithValue("@paymentState", paymentState); // only value = 1 is paid
+            row = sqlCmd.ExecuteNonQuery();
             sqlCnct.Close();
 
             return row;
@@ -219,8 +244,8 @@ namespace ObentoOrderSystemClient
             int store_ID = this.getStoreID(store_Name);
             SqlConnectionStringBuilder scsb;
             scsb = new SqlConnectionStringBuilder();
-            //scsb.DataSource = @".";
-            scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+            scsb.DataSource = @".";
+            //scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
             scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
@@ -245,8 +270,8 @@ namespace ObentoOrderSystemClient
             int length = 0;
 
             SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
-            //scsb.DataSource = @".";
-            scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+            scsb.DataSource = @".";
+            //scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
             scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
@@ -275,8 +300,8 @@ namespace ObentoOrderSystemClient
             string sqlFormattedDateNow = DateTime.Now.ToString("yyyy-MM-dd");
 
             SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
-            //scsb.DataSource = @".";
-            scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+            scsb.DataSource = @".";
+            //scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
             scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
@@ -287,9 +312,12 @@ namespace ObentoOrderSystemClient
             SqlCommand sqlCmd = new SqlCommand(strSQL, sqlCnct);
             SqlDataReader sqlReader = sqlCmd.ExecuteReader();
 
-            while (sqlReader.Read())
+            if (sqlReader.HasRows)
             {
-                returnString = sqlReader["storeID"].ToString();
+                while (sqlReader.Read())
+                {
+                    returnString = sqlReader["storeID"].ToString();
+                }
             }
 
             sqlReader.Close();
@@ -304,8 +332,8 @@ namespace ObentoOrderSystemClient
             ArrayList obentoArrayList = new ArrayList();
 
             SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
-            //scsb.DataSource = @".";
-            scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+            scsb.DataSource = @".";
+            //scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
             scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
@@ -334,8 +362,8 @@ namespace ObentoOrderSystemClient
             ArrayList orderArrayList = new ArrayList();
 
             SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
-            //scsb.DataSource = @".";
-            scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+            scsb.DataSource = @".";
+            //scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
             scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
             SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
@@ -343,17 +371,50 @@ namespace ObentoOrderSystemClient
             sqlCnct.Open();
             strSQL = "select * from orderTable as o inner join studentTable as s on o.stuID = s.stuId "
                 + "inner join obentoTable as ob on o.obentoID = ob.obentoID where cast(o.orderDate as date) = '"
-                + DateTime.Now.ToString("yyyy-MM-dd") + "' and s.classRoom = '" + class_Room + "';";
+                + DateTime.Now.ToString("yyyy-MM-dd") + "' and s.classRoom = '" + class_Room + "' and o.paid <> 1;";
             SqlCommand sqlCmd = new SqlCommand(strSQL, sqlCnct);
             SqlDataReader sqlReader = sqlCmd.ExecuteReader();
 
             if (sqlReader.HasRows) {
                 while (sqlReader.Read())
                 {
-                    //Console.WriteLine(sqlReader["obentoName"] + " " + sqlReader["obentoPrice"]);
+                    
                     orderArrayList.Add(sqlReader["stuName"] + " " + sqlReader["obentoName"] + " " + sqlReader["obentoPrice"]
-                        + " " + sqlReader["quantity"]);
-                    //cbObendoName.Items.Add(sqlReader["obentoName"].ToString());
+                        + " * " + sqlReader["quantity"]);
+                }
+            }
+
+            sqlReader.Close();
+            sqlCnct.Close();
+
+            return orderArrayList;
+        }
+
+        public ArrayList loadPaidOrder(string class_Room)
+        {
+            ArrayList orderArrayList = new ArrayList();
+
+            SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
+            scsb.DataSource = @".";
+            //scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+            scsb.InitialCatalog = "Obento";
+            scsb.IntegratedSecurity = true;
+            SqlConnection sqlCnct = new SqlConnection(scsb.ToString());
+            string strSQL = "";
+            sqlCnct.Open();
+            strSQL = "select * from orderTable as o inner join studentTable as s on o.stuID = s.stuId "
+                + "inner join obentoTable as ob on o.obentoID = ob.obentoID where cast(o.orderDate as date) = '"
+                + DateTime.Now.ToString("yyyy-MM-dd") + "' and s.classRoom = '" + class_Room + "' and o.paid <> 0;";
+            SqlCommand sqlCmd = new SqlCommand(strSQL, sqlCnct);
+            SqlDataReader sqlReader = sqlCmd.ExecuteReader();
+
+            if (sqlReader.HasRows)
+            {
+                while (sqlReader.Read())
+                {
+
+                    orderArrayList.Add(sqlReader["stuName"] + " " + sqlReader["obentoName"] + " " + sqlReader["obentoPrice"]
+                        + " * " + sqlReader["quantity"]);
                 }
             }
 

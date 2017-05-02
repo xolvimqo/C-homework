@@ -53,10 +53,10 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="LinkSQL.cs" />
-    <Compile Include="ObentoDataSet.Designer.cs">
+    <Compile Include="ObentoDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ObentoDataSet.xsd</DependentUpon>
+      <DependentUpon>ObentoDataSet11.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,16 +73,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ObentoDataSet.xsc">
-      <DependentUpon>ObentoDataSet.xsd</DependentUpon>
+    <None Include="ObentoDataSet11.xsc">
+      <DependentUpon>ObentoDataSet11.xsd</DependentUpon>
     </None>
-    <None Include="ObentoDataSet.xsd">
+    <None Include="ObentoDataSet11.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ObentoDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>ObentoDataSet11.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ObentoDataSet.xss">
-      <DependentUpon>ObentoDataSet.xsd</DependentUpon>
+    <None Include="ObentoDataSet11.xss">
+      <DependentUpon>ObentoDataSet11.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

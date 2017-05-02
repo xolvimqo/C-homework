@@ -78,8 +78,8 @@ namespace ObentoOrderSystemClient
             this.studentTableTableAdapter.Fill(this.obentoDataSet.studentTable);
             // SQL
             scsb = new SqlConnectionStringBuilder();
-			//scsb.DataSource = @".";
-			scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
+			scsb.DataSource = @".";
+			//scsb.DataSource = @"XOLVIMQO-PC\SQLEXPRESS";
             scsb.InitialCatalog = "Obento";
             scsb.IntegratedSecurity = true;
 
@@ -100,7 +100,7 @@ namespace ObentoOrderSystemClient
             sqlCnct.Close();
 
             Timer timer = new Timer();
-            timer.Interval = 10 * 1000; // 10 seconds
+            timer.Interval = 5 * 1000; // 10 seconds
             timer.Tick += new EventHandler(timer_Tick);
             timer.Start();
         }
@@ -108,14 +108,64 @@ namespace ObentoOrderSystemClient
         private void timer_Tick(object sender, EventArgs e)
         {
             lboxUnpaidOrder.Items.Clear();
-            if (cbClassroom.Text.Length > 0) {
-                ArrayList unpaidOrder = new LinkSQL().loadUnpaidOrder(cbClassroom.Text);
+            lboxPaidOrder.Items.Clear();
+            ArrayList strArrayList = new ArrayList();
+            string[] strArray = new string[5];
+            string name = "";
+            string str = "";
+            int sum = 0;
 
+            // To load unpaid order periodically
+            if (cbClassroom.Text.Length > 0) { // check if classroom is selected
+                ArrayList unpaidOrder = new LinkSQL().loadUnpaidOrder(cbClassroom.Text);
+                unpaidOrder.Add("1 2 3 4 5");
                 if (unpaidOrder.Count > 0)
                 {
-                    foreach (string str in unpaidOrder)
+                    foreach (string strLine in unpaidOrder)
                     {
-                        lboxUnpaidOrder.Items.Add(str);
+                        strArray = strLine.Split(' ');
+                        if (name != strArray[0]) {
+                            if (sum != 0 && name != "1") {
+                                lboxUnpaidOrder.Items.Add(name + " " + str + "總共 " + sum.ToString() + " 元");
+                            }
+                            str = "";
+                            sum = 0;
+                            name = strArray[0];
+                            str += strArray[1] + " * " + strArray[4] + ", ";
+                            sum += int.Parse(strArray[2]) * int.Parse(strArray[4]);
+                        } else
+                        {
+                            str += strArray[1] + " * " + strArray[4] + ", ";
+                            sum += int.Parse(strArray[2]) * int.Parse(strArray[4]);
+                        }
+                    }
+                }
+
+                // To load paid order periodically
+                ArrayList paidOrder = new LinkSQL().loadPaidOrder(cbClassroom.Text);
+                paidOrder.Add("1 2 3 4 5");
+                if (paidOrder.Count > 0)
+                {
+                    foreach (string strLine in paidOrder)
+                    {
+                        strArray = strLine.Split(' ');
+                        if (name != strArray[0])
+                        {
+                            if (sum != 0 && name != "1")
+                            {
+                                lboxPaidOrder.Items.Add(name + " " + str + "總共 " + sum.ToString() + " 元");
+                            }
+                            str = "";
+                            sum = 0;
+                            name = strArray[0];
+                            str += strArray[1] + " * " + strArray[4] + ", ";
+                            sum += int.Parse(strArray[2]) * int.Parse(strArray[4]);
+                        }
+                        else
+                        {
+                            str += strArray[1] + " * " + strArray[4] + ", ";
+                            sum += int.Parse(strArray[2]) * int.Parse(strArray[4]);
+                        }
                     }
                 }
             }
@@ -150,11 +200,17 @@ namespace ObentoOrderSystemClient
             sqlReader.Close();
             sqlCnct.Close();
 
-            store_ID = int.Parse(new LinkSQL().getEnvStoreID(cbClassroom.Text));
-            if (store_ID != 0)
+            try
             {
-                cbStoreName.Text = new LinkSQL().getStoreName(store_ID);
-                chkbox.Enabled = false;
+                store_ID = int.Parse(new LinkSQL().getEnvStoreID(cbClassroom.Text));
+                if (store_ID != 0)
+                {
+                    cbStoreName.Text = new LinkSQL().getStoreName(store_ID);
+                    chkbox.Enabled = false;
+                }
+            }
+            catch (Exception ex) {
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -279,6 +335,24 @@ namespace ObentoOrderSystemClient
             btnAdd.Enabled = true;
 
             int countEnvRows = new LinkSQL().setEnv(cbClassroom.Text, cbStoreName.Text);
+        }
+
+        private void btnPaid_Click(object sender, EventArgs e)
+        {
+            string stuName = lboxUnpaidOrder.SelectedItem.ToString().Split(' ')[0];
+            LinkSQL linkSQL = new LinkSQL();
+            int countRows = linkSQL.changePaymentState(stuName, 1);
+
+            MessageBox.Show(string.Format("共 {0} 筆資料受影響", countRows));
+        }
+
+        private void btnRefund_Click(object sender, EventArgs e)
+        {
+            string stuName = lboxPaidOrder.SelectedItem.ToString().Split(' ')[0];
+            LinkSQL linkSQL = new LinkSQL();
+            int countRows = linkSQL.changePaymentState(stuName, 0);
+
+            MessageBox.Show(string.Format("共 {0} 筆資料受影響", countRows));
         }
     }
 }
