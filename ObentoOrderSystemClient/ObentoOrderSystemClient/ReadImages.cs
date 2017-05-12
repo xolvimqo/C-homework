@@ -13,24 +13,30 @@ namespace ObentoOrderSystemClient
     {
         ImageList imageList = new ImageList();
 
-        public ReadImages()
+        public ReadImages(string imgName)
         {
+            
             // To read image files
             string currentDir = Directory.GetCurrentDirectory();
             //MessageBox.Show(currentDir);
             DirectoryInfo imageDir = new DirectoryInfo(currentDir + @"\obentoImages");
+            
+
+            //DirectoryInfo imageDir = new DirectoryInfo(@"C:\Users\iii\Documents\Visual Studio 2015\Projects\ObentoOrderSystemClient\obentoImages");
 
             foreach (FileInfo file in imageDir.GetFiles())
             {
                 try
                 {
-                    imageList.Images.Add(Image.FromFile(file.FullName));
+                    string[] strName = file.FullName.Split('\\');
+                    if (strName.Last().Split('.')[0] == imgName) {
+                        imageList.Images.Add(Image.FromFile(file.FullName));
+                    }
                 }
                 catch
                 {
-                    Console.WriteLine("This is not an image file");
+                    Console.WriteLine("There are no image file");
                 }
-
             }
         }
 
