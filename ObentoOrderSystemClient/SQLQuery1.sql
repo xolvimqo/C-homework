@@ -2,14 +2,14 @@
 use Obento;
 go
 
-select * from orderTable;
+select *
+from obentoTable;
 go
 
-select * from orderTable where paid <> 1;
+update obentoTable
+set picName = 'default';
 go
 
-alter table orderTable add paid int default 0;
-go
-
-update orderTable set paid=0;
+select *
+from storeTable;
 go
