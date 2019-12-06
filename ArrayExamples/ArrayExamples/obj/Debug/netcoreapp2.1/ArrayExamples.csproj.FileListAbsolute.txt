@@ -1,0 +1,11 @@
+C:\Users\Last_\source\repos\ArrayExamples\ArrayExamples\bin\Debug\netcoreapp2.1\ArrayExamples.deps.json
+C:\Users\Last_\source\repos\ArrayExamples\ArrayExamples\bin\Debug\netcoreapp2.1\ArrayExamples.runtimeconfig.json
+C:\Users\Last_\source\repos\ArrayExamples\ArrayExamples\bin\Debug\netcoreapp2.1\ArrayExamples.runtimeconfig.dev.json
+C:\Users\Last_\source\repos\ArrayExamples\ArrayExamples\bin\Debug\netcoreapp2.1\ArrayExamples.dll
+C:\Users\Last_\source\repos\ArrayExamples\ArrayExamples\bin\Debug\netcoreapp2.1\ArrayExamples.pdb
+C:\Users\Last_\source\repos\ArrayExamples\ArrayExamples\obj\Debug\netcoreapp2.1\ArrayExamples.csprojAssemblyReference.cache
+C:\Users\Last_\source\repos\ArrayExamples\ArrayExamples\obj\Debug\netcoreapp2.1\ArrayExamples.csproj.CoreCompileInputs.cache
+C:\Users\Last_\source\repos\ArrayExamples\ArrayExamples\obj\Debug\netcoreapp2.1\ArrayExamples.AssemblyInfoInputs.cache
+C:\Users\Last_\source\repos\ArrayExamples\ArrayExamples\obj\Debug\netcoreapp2.1\ArrayExamples.AssemblyInfo.cs
+C:\Users\Last_\source\repos\ArrayExamples\ArrayExamples\obj\Debug\netcoreapp2.1\ArrayExamples.dll
+C:\Users\Last_\source\repos\ArrayExamples\ArrayExamples\obj\Debug\netcoreapp2.1\ArrayExamples.pdb

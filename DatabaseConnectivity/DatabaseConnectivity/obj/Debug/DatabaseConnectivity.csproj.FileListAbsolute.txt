@@ -1,0 +1,13 @@
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\bin\Debug\ConnDatabase.mdf
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\bin\Debug\ConnDatabase_log.ldf
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\bin\Debug\DatabaseConnectivity.exe.config
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\bin\Debug\DatabaseConnectivity.exe
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\bin\Debug\DatabaseConnectivity.pdb
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\obj\Debug\DatabaseConnectivity.csprojAssemblyReference.cache
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\obj\Debug\DatabaseConnectivity.Form1.resources
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\obj\Debug\DatabaseConnectivity.Properties.Resources.resources
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\obj\Debug\DatabaseConnectivity.csproj.GenerateResource.cache
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\obj\Debug\DatabaseConnectivity.csproj.CoreCompileInputs.cache
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\obj\Debug\DatabaseConnectivity.exe
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\obj\Debug\DatabaseConnectivity.pdb
+C:\Users\Last_\source\repos\DatabaseConnectivity\DatabaseConnectivity\obj\Debug\DatabaseConnectivity.Form2.resources

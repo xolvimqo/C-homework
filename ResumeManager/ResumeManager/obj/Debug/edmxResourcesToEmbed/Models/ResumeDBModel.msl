@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbResumeManagerModelStoreContainer" CdmEntityContainer="dbResumeManagerEntities1">
+    <EntitySetMapping Name="tbl_education">
+      <EntityTypeMapping TypeName="dbResumeManagerModel.tbl_education">
+        <MappingFragment StoreEntitySet="tbl_education">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="school_name" ColumnName="school_name" />
+          <ScalarProperty Name="degree" ColumnName="degree" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="finish_date" ColumnName="finish_date" />
+          <ScalarProperty Name="program_name" ColumnName="program_name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="isEnrolledCurrently" ColumnName="isEnrolledCurrently" />
+          <ScalarProperty Name="fk_user_id" ColumnName="fk_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_extra_info">
+      <EntityTypeMapping TypeName="dbResumeManagerModel.tbl_extra_info">
+        <MappingFragment StoreEntitySet="tbl_extra_info">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="info_title" ColumnName="info_title" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="fk_user_id" ColumnName="fk_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_users">
+      <EntityTypeMapping TypeName="dbResumeManagerModel.tbl_users">
+        <MappingFragment StoreEntitySet="tbl_users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="admin" ColumnName="admin" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="province" ColumnName="province" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_work_history">
+      <EntityTypeMapping TypeName="dbResumeManagerModel.tbl_work_history">
+        <MappingFragment StoreEntitySet="tbl_work_history">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="company_name" ColumnName="company_name" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="leave_date" ColumnName="leave_date" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="isWorkingCurrently" ColumnName="isWorkingCurrently" />
+          <ScalarProperty Name="fk_user_id" ColumnName="fk_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

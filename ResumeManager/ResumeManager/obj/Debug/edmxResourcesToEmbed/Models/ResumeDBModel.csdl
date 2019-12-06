@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbResumeManagerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_education">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="school_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="degree" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="start_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="finish_date" Type="DateTime" Precision="0" />
+    <Property Name="program_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="isEnrolledCurrently" Type="Byte" Nullable="false" />
+    <Property Name="fk_user_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbl_users" Relationship="Self.FK_tbl_users_id" FromRole="tbl_education" ToRole="tbl_users" />
+  </EntityType>
+  <EntityType Name="tbl_extra_info">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="info_title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="fk_user_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbl_users" Relationship="Self.FK_tbl_extra_info_to_tbl_users" FromRole="tbl_extra_info" ToRole="tbl_users" />
+  </EntityType>
+  <EntityType Name="tbl_users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="firstname" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastname" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="phonenumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="admin" Type="Byte" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="province" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tbl_education" Relationship="Self.FK_tbl_users_id" FromRole="tbl_users" ToRole="tbl_education" />
+    <NavigationProperty Name="tbl_extra_info" Relationship="Self.FK_tbl_extra_info_to_tbl_users" FromRole="tbl_users" ToRole="tbl_extra_info" />
+    <NavigationProperty Name="tbl_work_history" Relationship="Self.FK_tbl_work_history_to_tbl_users" FromRole="tbl_users" ToRole="tbl_work_history" />
+  </EntityType>
+  <EntityType Name="tbl_work_history">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="company_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="position" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="start_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="leave_date" Type="DateTime" Precision="0" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="isWorkingCurrently" Type="Byte" Nullable="false" />
+    <Property Name="fk_user_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbl_users" Relationship="Self.FK_tbl_work_history_to_tbl_users" FromRole="tbl_work_history" ToRole="tbl_users" />
+  </EntityType>
+  <Association Name="FK_tbl_users_id">
+    <End Role="tbl_users" Type="Self.tbl_users" Multiplicity="1" />
+    <End Role="tbl_education" Type="Self.tbl_education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_education">
+        <PropertyRef Name="fk_user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_extra_info_to_tbl_users">
+    <End Role="tbl_users" Type="Self.tbl_users" Multiplicity="1" />
+    <End Role="tbl_extra_info" Type="Self.tbl_extra_info" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_extra_info">
+        <PropertyRef Name="fk_user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_work_history_to_tbl_users">
+    <End Role="tbl_users" Type="Self.tbl_users" Multiplicity="1" />
+    <End Role="tbl_work_history" Type="Self.tbl_work_history" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_work_history">
+        <PropertyRef Name="fk_user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbResumeManagerEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_education" EntityType="Self.tbl_education" />
+    <EntitySet Name="tbl_extra_info" EntityType="Self.tbl_extra_info" />
+    <EntitySet Name="tbl_users" EntityType="Self.tbl_users" />
+    <EntitySet Name="tbl_work_history" EntityType="Self.tbl_work_history" />
+    <AssociationSet Name="FK_tbl_users_id" Association="Self.FK_tbl_users_id">
+      <End Role="tbl_users" EntitySet="tbl_users" />
+      <End Role="tbl_education" EntitySet="tbl_education" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_extra_info_to_tbl_users" Association="Self.FK_tbl_extra_info_to_tbl_users">
+      <End Role="tbl_users" EntitySet="tbl_users" />
+      <End Role="tbl_extra_info" EntitySet="tbl_extra_info" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_work_history_to_tbl_users" Association="Self.FK_tbl_work_history_to_tbl_users">
+      <End Role="tbl_users" EntitySet="tbl_users" />
+      <End Role="tbl_work_history" EntitySet="tbl_work_history" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

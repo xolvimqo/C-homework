@@ -1,0 +1,15 @@
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\bin\Debug\WindowsFormsFinalProject.exe.config
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\bin\Debug\WindowsFormsFinalProject.exe
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\bin\Debug\WindowsFormsFinalProject.pdb
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\obj\Debug\WindowsFormsFinalProject.csprojAssemblyReference.cache
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\obj\Debug\WindowsFormsFinalProject.Form1.resources
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\obj\Debug\WindowsFormsFinalProject.Properties.Resources.resources
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\obj\Debug\WindowsFormsFinalProject.csproj.GenerateResource.cache
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\obj\Debug\WindowsFormsFinalProject.csproj.CoreCompileInputs.cache
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\obj\Debug\WindowsFormsFinalProject.exe
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\obj\Debug\WindowsFormsFinalProject.pdb
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\obj\Debug\WindowsFormsFinalProject.csproj.CopyComplete
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\obj\Debug\WindowsFormsFinalProject.FormResumaManager.resources
+C:\Users\Last_\source\repos\WindowsFormsFinalProject\WindowsFormsFinalProject\obj\Debug\WindowsFormsFinalProject.FormSignUp.resources

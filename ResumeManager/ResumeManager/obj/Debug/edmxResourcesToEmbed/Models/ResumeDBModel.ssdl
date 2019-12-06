@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbResumeManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_education">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="school_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="degree" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="start_date" Type="date" Nullable="false" />
+    <Property Name="finish_date" Type="date" />
+    <Property Name="program_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="255" />
+    <Property Name="isEnrolledCurrently" Type="tinyint" Nullable="false" />
+    <Property Name="fk_user_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_extra_info">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="info_title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="255" />
+    <Property Name="fk_user_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="45" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="phonenumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="admin" Type="tinyint" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="50" />
+    <Property Name="city" Type="varchar" MaxLength="20" />
+    <Property Name="province" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tbl_work_history">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="company_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="position" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="start_date" Type="date" Nullable="false" />
+    <Property Name="leave_date" Type="date" />
+    <Property Name="description" Type="varchar" MaxLength="255" />
+    <Property Name="isWorkingCurrently" Type="tinyint" Nullable="false" />
+    <Property Name="fk_user_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tbl_extra_info_to_tbl_users">
+    <End Role="tbl_users" Type="Self.tbl_users" Multiplicity="1" />
+    <End Role="tbl_extra_info" Type="Self.tbl_extra_info" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_extra_info">
+        <PropertyRef Name="fk_user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_users_id">
+    <End Role="tbl_users" Type="Self.tbl_users" Multiplicity="1" />
+    <End Role="tbl_education" Type="Self.tbl_education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_education">
+        <PropertyRef Name="fk_user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_work_history_to_tbl_users">
+    <End Role="tbl_users" Type="Self.tbl_users" Multiplicity="1" />
+    <End Role="tbl_work_history" Type="Self.tbl_work_history" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_work_history">
+        <PropertyRef Name="fk_user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbResumeManagerModelStoreContainer">
+    <EntitySet Name="tbl_education" EntityType="Self.tbl_education" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_extra_info" EntityType="Self.tbl_extra_info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_users" EntityType="Self.tbl_users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_work_history" EntityType="Self.tbl_work_history" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbl_extra_info_to_tbl_users" Association="Self.FK_tbl_extra_info_to_tbl_users">
+      <End Role="tbl_users" EntitySet="tbl_users" />
+      <End Role="tbl_extra_info" EntitySet="tbl_extra_info" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_users_id" Association="Self.FK_tbl_users_id">
+      <End Role="tbl_users" EntitySet="tbl_users" />
+      <End Role="tbl_education" EntitySet="tbl_education" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_work_history_to_tbl_users" Association="Self.FK_tbl_work_history_to_tbl_users">
+      <End Role="tbl_users" EntitySet="tbl_users" />
+      <End Role="tbl_work_history" EntitySet="tbl_work_history" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

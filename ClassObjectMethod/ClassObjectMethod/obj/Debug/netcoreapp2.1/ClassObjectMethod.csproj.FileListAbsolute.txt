@@ -1,0 +1,11 @@
+C:\Users\Last_\source\repos\ClassObjectMethod\ClassObjectMethod\bin\Debug\netcoreapp2.1\ClassObjectMethod.deps.json
+C:\Users\Last_\source\repos\ClassObjectMethod\ClassObjectMethod\bin\Debug\netcoreapp2.1\ClassObjectMethod.runtimeconfig.json
+C:\Users\Last_\source\repos\ClassObjectMethod\ClassObjectMethod\bin\Debug\netcoreapp2.1\ClassObjectMethod.runtimeconfig.dev.json
+C:\Users\Last_\source\repos\ClassObjectMethod\ClassObjectMethod\bin\Debug\netcoreapp2.1\ClassObjectMethod.dll
+C:\Users\Last_\source\repos\ClassObjectMethod\ClassObjectMethod\bin\Debug\netcoreapp2.1\ClassObjectMethod.pdb
+C:\Users\Last_\source\repos\ClassObjectMethod\ClassObjectMethod\obj\Debug\netcoreapp2.1\ClassObjectMethod.csprojAssemblyReference.cache
+C:\Users\Last_\source\repos\ClassObjectMethod\ClassObjectMethod\obj\Debug\netcoreapp2.1\ClassObjectMethod.csproj.CoreCompileInputs.cache
+C:\Users\Last_\source\repos\ClassObjectMethod\ClassObjectMethod\obj\Debug\netcoreapp2.1\ClassObjectMethod.AssemblyInfoInputs.cache
+C:\Users\Last_\source\repos\ClassObjectMethod\ClassObjectMethod\obj\Debug\netcoreapp2.1\ClassObjectMethod.AssemblyInfo.cs
+C:\Users\Last_\source\repos\ClassObjectMethod\ClassObjectMethod\obj\Debug\netcoreapp2.1\ClassObjectMethod.dll
+C:\Users\Last_\source\repos\ClassObjectMethod\ClassObjectMethod\obj\Debug\netcoreapp2.1\ClassObjectMethod.pdb

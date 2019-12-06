@@ -1,0 +1,7 @@
+C:\Users\Last_\source\repos\ArrayPrinterConsole\ArrayPrinterConsole\bin\Debug\ArrayPrinterConsole.exe.config
+C:\Users\Last_\source\repos\ArrayPrinterConsole\ArrayPrinterConsole\bin\Debug\ArrayPrinterConsole.exe
+C:\Users\Last_\source\repos\ArrayPrinterConsole\ArrayPrinterConsole\bin\Debug\ArrayPrinterConsole.pdb
+C:\Users\Last_\source\repos\ArrayPrinterConsole\ArrayPrinterConsole\obj\Debug\ArrayPrinterConsole.csprojAssemblyReference.cache
+C:\Users\Last_\source\repos\ArrayPrinterConsole\ArrayPrinterConsole\obj\Debug\ArrayPrinterConsole.csproj.CoreCompileInputs.cache
+C:\Users\Last_\source\repos\ArrayPrinterConsole\ArrayPrinterConsole\obj\Debug\ArrayPrinterConsole.exe
+C:\Users\Last_\source\repos\ArrayPrinterConsole\ArrayPrinterConsole\obj\Debug\ArrayPrinterConsole.pdb
