@@ -201,16 +201,10 @@ namespace WindowsFormsFinalProject
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "xolvimqo-server.database.windows.net";
-                builder.UserID = "xolvimqo";
-                builder.Password = "Ej3Cj06Ru8";
-                builder.InitialCatalog = "xolvimqoDB";
-
-                //builder.DataSource = "(localdb)\\MSSQLLocalDB";
-                //builder.InitialCatalog = "LocalResumeManagerDB";
-                //builder.UserID = "LAPTOP-3VMO0FCU\\Last_";
-                //builder.Password = "Ej3Cj06Ru8lastwish404";
-                //builder.IntegratedSecurity = true;
+                builder.DataSource = "";
+                builder.UserID = "";
+                builder.Password = "";
+                builder.InitialCatalog = "";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
@@ -242,16 +236,10 @@ namespace WindowsFormsFinalProject
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "xolvimqo-server.database.windows.net";
-                builder.UserID = "xolvimqo";
-                builder.Password = "Ej3Cj06Ru8";
-                builder.InitialCatalog = "xolvimqoDB";
-
-                //builder.DataSource = "(localdb)\\MSSQLLocalDB";
-                //builder.InitialCatalog = "LocalResumeManagerDB";
-                //builder.UserID = "LAPTOP-3VMO0FCU\\Last_";
-                //builder.Password = "Ej3Cj06Ru8lastwish404";
-                //builder.IntegratedSecurity = true;
+                builder.DataSource = "";
+                builder.UserID = "";
+                builder.Password = "";
+                builder.InitialCatalog = "";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
@@ -283,16 +271,10 @@ namespace WindowsFormsFinalProject
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "xolvimqo-server.database.windows.net";
-                builder.UserID = "xolvimqo";
-                builder.Password = "Ej3Cj06Ru8";
-                builder.InitialCatalog = "xolvimqoDB";
-
-                //builder.DataSource = "(localdb)\\MSSQLLocalDB";
-                //builder.InitialCatalog = "LocalResumeManagerDB";
-                //builder.UserID = "LAPTOP-3VMO0FCU\\Last_";
-                //builder.Password = "Ej3Cj06Ru8lastwish404";
-                //builder.IntegratedSecurity = true;
+                builder.DataSource = "";
+                builder.UserID = "";
+                builder.Password = "";
+                builder.InitialCatalog = "";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
@@ -322,16 +304,10 @@ namespace WindowsFormsFinalProject
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "xolvimqo-server.database.windows.net";
-                builder.UserID = "xolvimqo";
-                builder.Password = "Ej3Cj06Ru8";
-                builder.InitialCatalog = "xolvimqoDB";
-
-                //builder.DataSource = "(localdb)\\MSSQLLocalDB";
-                //builder.InitialCatalog = "LocalResumeManagerDB";
-                //builder.UserID = "LAPTOP-3VMO0FCU\\Last_";
-                //builder.Password = "Ej3Cj06Ru8lastwish404";
-                //builder.IntegratedSecurity = true;
+                builder.DataSource = "";
+                builder.UserID = "";
+                builder.Password = "";
+                builder.InitialCatalog = "";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
@@ -361,16 +337,10 @@ namespace WindowsFormsFinalProject
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "xolvimqo-server.database.windows.net";
-                builder.UserID = "xolvimqo";
-                builder.Password = "Ej3Cj06Ru8";
-                builder.InitialCatalog = "xolvimqoDB";
-
-                //builder.DataSource = "(localdb)\\MSSQLLocalDB";
-                //builder.InitialCatalog = "LocalResumeManagerDB";
-                //builder.UserID = "LAPTOP-3VMO0FCU\\Last_";
-                //builder.Password = "Ej3Cj06Ru8lastwish404";
-                //builder.IntegratedSecurity = true;
+                builder.DataSource = "";
+                builder.UserID = "";
+                builder.Password = "";
+                builder.InitialCatalog = "";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
@@ -400,16 +370,10 @@ namespace WindowsFormsFinalProject
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "xolvimqo-server.database.windows.net";
-                builder.UserID = "xolvimqo";
-                builder.Password = "Ej3Cj06Ru8";
-                builder.InitialCatalog = "xolvimqoDB";
-
-                //builder.DataSource = "(localdb)\\MSSQLLocalDB";
-                //builder.InitialCatalog = "LocalResumeManagerDB";
-                //builder.UserID = "LAPTOP-3VMO0FCU\\Last_";
-                //builder.Password = "Ej3Cj06Ru8lastwish404";
-                //builder.IntegratedSecurity = true;
+                builder.DataSource = "";
+                builder.UserID = "";
+                builder.Password = "";
+                builder.InitialCatalog = "";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
@@ -441,15 +405,10 @@ namespace WindowsFormsFinalProject
                 try
                 {
                     SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                    builder.DataSource = "xolvimqo-server.database.windows.net";
-                    builder.UserID = "xolvimqo";
-                    builder.Password = "Ej3Cj06Ru8";
-                    builder.InitialCatalog = "xolvimqoDB";
-
-                    //builder.DataSource = "(localdb)\\MSSQLLocalDB";
-                    //builder.InitialCatalog = "LocalResumeManagerDB";
-                    //builder.UserID = "LAPTOP-3VMO0FCU\\Last_";
-                    //builder.Password = "Ej3Cj06Ru8lastwish404";
+                    builder.DataSource = "";
+                    builder.UserID = "";
+                    builder.Password = "";
+                    builder.InitialCatalog = "";
                     builder.IntegratedSecurity = true;
 
                     using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
@@ -615,16 +574,10 @@ namespace WindowsFormsFinalProject
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "xolvimqo-server.database.windows.net";
-                builder.UserID = "xolvimqo";
-                builder.Password = "Ej3Cj06Ru8";
-                builder.InitialCatalog = "xolvimqoDB";
-
-                //builder.DataSource = "(localdb)\\MSSQLLocalDB";
-                //builder.InitialCatalog = "LocalResumeManagerDB";
-                //builder.UserID = "LAPTOP-3VMO0FCU\\Last_";
-                //builder.Password = "Ej3Cj06Ru8lastwish404";
-                //builder.IntegratedSecurity = true;
+                builder.DataSource = "";
+                builder.UserID = "";
+                builder.Password = "";
+                builder.InitialCatalog = "";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
@@ -658,16 +611,10 @@ namespace WindowsFormsFinalProject
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-                builder.DataSource = "xolvimqo-server.database.windows.net";
-                builder.UserID = "xolvimqo";
-                builder.Password = "Ej3Cj06Ru8";
-                builder.InitialCatalog = "xolvimqoDB";
-
-                //builder.DataSource = "(localdb)\\MSSQLLocalDB";
-                //builder.InitialCatalog = "LocalResumeManagerDB";
-                //builder.UserID = "LAPTOP-3VMO0FCU\\Last_";
-                //builder.Password = "Ej3Cj06Ru8lastwish404";
-                //builder.IntegratedSecurity = true;
+                builder.DataSource = "";
+                builder.UserID = "";
+                builder.Password = "";
+                builder.InitialCatalog = "";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
